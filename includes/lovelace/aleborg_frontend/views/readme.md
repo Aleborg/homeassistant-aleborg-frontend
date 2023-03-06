@@ -8,17 +8,20 @@ This file should not be removed, it contains the code for all auto-generated pag
 This file displays the home page.
 
 **_Todo_**
-- [ ] _Make this general, for the moment it needs to be customized._
+- [ ] _Make home.yaml general, for the moment it needs to be customized._
 
 ### [lights.yaml](lights.yaml)
 This file displays a list of ALL lights.
+
+### [zigbeemap.yaml](zigbeemap.yaml)
+Displays a map of the zigbee network, can be turned off in [settings.yaml](../settings.yaml)
 
 ## How-To
 When creating a new file add this code:
 
 ```yaml
 theme: {{ _global.tablet.settings.theme}}
-title: {{area}}
+title: {{title}}
 path: {{url}}
 icon: {{icon}}
 type: custom:ha-dashboard
