@@ -13,13 +13,6 @@ cards:
     - title: {{title}}
       areaId: {{areaId}}
       image: {{image}}
-      
-
-  # Include all Scenes in the room
-  #############################################
-  - !include
-    - scenes/scenes_card.yaml
-    - title: {{title}}
   
   # Include the tabbed card
   #############################################
@@ -28,3 +21,9 @@ cards:
     - tabs/tabs_card.yaml
     - title: {{title}}
       areaId: {{areaId}}
+
+  # Include all Scenes in the room
+  #############################################
+  - !include
+    - scenes/scenes_card.yaml
+    - title: {{title}}

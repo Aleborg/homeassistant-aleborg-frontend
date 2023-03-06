@@ -5,7 +5,6 @@
 type: custom:auto-entities
 card:
   type: custom:mushroom-chips-card
-  alignment: center
   card_mod: !include styles/scenes_card_card_mod.yaml
 card_param: chips
 filter:
