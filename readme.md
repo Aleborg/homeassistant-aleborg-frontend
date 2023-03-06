@@ -1,9 +1,16 @@
 # Aleborg Frontend
 
-Tried to make this frontend as automated as possible. Due to restrictions in the frontend, a lot of things needs to be configured in the file [/includes/lovelace/aleborg_frontend/settings.yaml](settings.md). 
+This is a complete frontend for [HomeAssistant](https://home-assistant.io)
+
+I've tried to make this frontend as automated as possible. Due to restrictions in the frontend, a lot of things needs to be configured in the file [/includes/lovelace/aleborg_frontend/settings.yaml](settings.md).
+
 This frontend doesn't have support for all types of devices and entities due to the fact that I don't have all different devices, such as covers. [A list of my hardware can be found here](hardware.md).
 
+There's still a lot to do in this frontend and my CSS skills sucks, so all help is welcome! 
+
 :warning: All files and folders needs to be placed in the folder `config`
+
+<a href="https://www.buymeacoffee.com/aleborg"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=aleborg&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
 ## Table of Content <!-- omit in toc -->
 - [Aleborg Frontend](#aleborg-frontend)
@@ -90,14 +97,14 @@ Resource type: Stylesheet
 ```
 ## Settings
 
-All configurations for this frontend is defined here:
+All configuration options for this frontend is defined here:
 
 ### [/includes/lovelace/aleborg_frontend/settings.yaml](settings.md)
 
 ## Folders and descriptions of files
 
-### [/includes/lovelace/aleborg_frontend/common](common/readme.md)
+### [/includes/lovelace/aleborg_frontend/common](/includes/lovelace/aleborg_frontend/common/readme.md)
 
-### [/includes/lovelace/aleborg_frontend/templates](templates/readme.md)
+### [/includes/lovelace/aleborg_frontend/templates](/includes/lovelace/aleborg_frontend/templates/readme.md)
 
-### [/includes/lovelace/aleborg_frontend/views](views/readme.md)
+### [/includes/lovelace/aleborg_frontend/views](/includes/lovelace/aleborg_frontend/views/readme.md)
