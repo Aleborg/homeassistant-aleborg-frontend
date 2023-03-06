@@ -71,11 +71,6 @@ $RECYCLE.BIN/
 /node_modules
 home-assistant.*
 
-*.jpg
-*.png
-*.gif
-*.svg
-*.mp3
 *.log
 music_assistant.db
 

@@ -27,6 +27,13 @@ There's still a lot to do in this frontend and my CSS skills sucks, so all help 
     - [/includes/lovelace/aleborg\_frontend/common](#includeslovelacealeborg_frontendcommon)
     - [/includes/lovelace/aleborg\_frontend/templates](#includeslovelacealeborg_frontendtemplates)
     - [/includes/lovelace/aleborg\_frontend/views](#includeslovelacealeborg_frontendviews)
+  - [Screenshots](#screenshots)
+    - [Home](#home)
+    - [All lights](#all-lights)
+    - [Lights in a room](#lights-in-a-room)
+    - [Multimedia in a room](#multimedia-in-a-room)
+    - [Calendar in a room](#calendar-in-a-room)
+    - [Power usage in a room](#power-usage-in-a-room)
 
 ## Requirements
 
@@ -108,3 +115,17 @@ All configuration options for this frontend is defined here:
 ### [/includes/lovelace/aleborg_frontend/templates](/includes/lovelace/aleborg_frontend/templates/readme.md)
 
 ### [/includes/lovelace/aleborg_frontend/views](/includes/lovelace/aleborg_frontend/views/readme.md)
+
+## Screenshots
+### Home
+![Home](includes/lovelace/screenshots/home.png)
+### All lights
+![All lights](includes/lovelace/screenshots/all_lights.png)
+### Lights in a room
+![Lights in a room](includes/lovelace/screenshots/lights.png)
+### Multimedia in a room
+![Media](includes/lovelace/screenshots/media.png)
+### Calendar in a room
+![Calendar](includes/lovelace/screenshots/calendar.png)
+### Power usage in a room
+![Power Usage](includes/lovelace/screenshots/power_usage.png)
