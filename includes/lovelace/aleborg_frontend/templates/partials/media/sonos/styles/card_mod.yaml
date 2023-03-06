@@ -1,5 +1,0 @@
-style: |
-  ha-card {
-    background: none;
-    box-shadow: none;
-  }
