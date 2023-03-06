@@ -4,7 +4,7 @@
 #############################################
 - domain: sensor
   area: "{{title}}"
-  state: "> 0.09"
+#  state: "> 0.09"
   attributes:
     device_class: energy
     meter_period: "yearly"
