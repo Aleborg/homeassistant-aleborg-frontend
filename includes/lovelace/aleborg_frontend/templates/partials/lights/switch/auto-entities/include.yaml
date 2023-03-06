@@ -1,0 +1,9 @@
+# lovelace_gen
+
+# Light switches
+#############################################
+- domain: switch
+  area: "{{title}}"
+  options: !include
+    - ../light_switch.yaml
+    - entity: this.entity_id

@@ -1,0 +1,13 @@
+style: |
+  :host { 
+    --masonry-view-card-margin: var(--dimmer-slider-card-mod-margin);
+  }
+  @media screen and (max-width: 480px) {
+    :host { 
+      --masonry-view-card-margin: var(--dimmer-slider-card-mod-max480-margin);
+    }
+    .my-slider-custom-container {
+      max-height: var(--dimmer-slider-card-mod-max480-max-height) !important;
+      min-height: var(--dimmer-slider-card-mod-max480-min-height) !important;
+    }
+  }

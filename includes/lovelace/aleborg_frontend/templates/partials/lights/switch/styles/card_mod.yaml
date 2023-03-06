@@ -1,0 +1,9 @@
+style: |
+  @media screen and (max-width: 480px) {
+    #name {
+      font-size: var(--switch-card-mod-max480-font-size) !important;
+    }
+    ha-card.button-card-main {
+      max-width: var(--switch-card-mod-max480-max-width) !important;
+    }
+  }

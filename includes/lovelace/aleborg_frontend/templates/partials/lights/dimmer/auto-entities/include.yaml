@@ -1,0 +1,9 @@
+# lovelace_gen
+
+# Dimmable lights
+#############################################
+- domain: light
+  area: "{{title}}"
+  options: !include
+    - ../light_dimmer.yaml
+    - entity: this.entity_id

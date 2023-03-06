@@ -1,0 +1,7 @@
+margin: 0px
+grid-template-columns: repeat(auto-fill, minmax(90px, 120px))
+grid-auto-flow: column
+mediaquery:
+  "(max-width: 480px)":
+    grid-template-columns: repeat(auto-fit,minmax(74px, 90px))
+    grid-auto-flow: row

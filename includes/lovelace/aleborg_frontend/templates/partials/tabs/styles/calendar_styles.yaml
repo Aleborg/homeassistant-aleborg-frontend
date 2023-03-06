@@ -1,0 +1,4 @@
+--mdc-theme-primary: var(--tabs-calendar-icon-active)
+--mdc-tab-text-label-color-default: var(--tabs-calendar-icon-inactive)
+--mdc-tab-color-default: rgba(0,230,10,0.6)
+--mdc-tab-horizontal-padding: var(--tabs-calendar-horizontal-padding)

@@ -1,0 +1,19 @@
+# lovelace_gen
+
+{% if _global.tablet.settings.excludeEntities.power_usage.entities %}
+  {% for entity in _global.tablet.settings.excludeEntities.power_usage.entities %}
+- entity_id: '{{entity}}'
+  {% endfor %}
+{% endif %}
+
+{% if _global.tablet.settings.excludeEntities.power_usage.state %}
+  {% for state in _global.tablet.settings.excludeEntities.power_usage.state %}
+- state: '{{state}}'
+  {% endfor %}
+{% endif %}
+
+{% if _global.tablet.settings.excludeEntities.power_usage.hidden_by %}
+  {% for hidden in _global.tablet.settings.excludeEntities.power_usage.hidden_by %}
+- hidden_by: '{{hidden}}'
+  {% endfor %}
+{% endif %}

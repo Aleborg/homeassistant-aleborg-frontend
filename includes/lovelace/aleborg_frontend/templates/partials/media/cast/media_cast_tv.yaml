@@ -1,0 +1,6 @@
+type: custom:mini-media-player
+entity: this.entity_id
+group: true
+icon: mdi:speaker-multiple
+hide:
+  controls: false

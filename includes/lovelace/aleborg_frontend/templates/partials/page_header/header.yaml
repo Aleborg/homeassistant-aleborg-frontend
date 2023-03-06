@@ -1,0 +1,53 @@
+# lovelace_gen
+
+# Head banner card
+#############################################
+type: custom:layout-card
+layout_type: grid
+layout: !include styles/layout.yaml
+view_layout:
+  grid-area: header
+cards:
+  # Header picture card
+  #############################################
+  - type: area
+    area: {{areaId}}
+    show_camera: false
+    style: !include styles/picture_style.yaml
+    view_layout:
+      show:
+        mediaquery: "(min-width: 768px)"
+      grid-area: area
+
+  # Header Title
+  #############################################
+  - type: custom:mod-card
+    card_mod: !include styles/title_card_mod.yaml
+    card:
+      type: custom:mushroom-title-card
+      title: {{title}}
+    view_layout:
+        grid-area: header
+        place-self: center
+
+  # Header Stats
+  #############################################
+  - type: custom:mod-card
+    card_mod: !include styles/stats_card_mod.yaml
+    view_layout:
+      grid-area: stats
+    card:
+      type: custom:auto-entities
+      card:
+        type: custom:layout-card
+        layout_type: grid
+        layout:
+          grid-auto-flow: column
+          justify-items: stretch
+          justify-content: stretch
+      card_param: cards
+      filter:
+        include: !include
+          - auto-entities/include.yaml
+          - title: {{title}}    
+        exclude: !include auto-entities/exclude.yaml

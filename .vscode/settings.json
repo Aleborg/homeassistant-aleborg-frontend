@@ -1,0 +1,13 @@
+{
+    "prettier.bracketSpacing": false,
+    "nuxt.isNuxtApp": false,
+    "files.associations": {
+        "*.yaml": "home-assistant"
+    },
+    "editor.tabSize": 2,
+    "editor.indentSize": "tabSize",
+    "editor.detectIndentation": false,
+    "editor.codeActionsOnSave": {
+      
+    }
+}

@@ -1,0 +1,7 @@
+margin: 10px
+grid-template-columns: auto
+grid-template-rows: masonry
+grid-auto-flow: row
+grid-template-areas: |
+  "header"
+  "columns"

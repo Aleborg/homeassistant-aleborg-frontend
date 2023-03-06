@@ -1,0 +1,18 @@
+grid:
+  - grid-template-areas: '"n" "i"'
+  - grid-template-rows: 16px 34px
+  - min-width: var(--header-stats-grid-min-width)
+  - height: var(--header-stats-grid-height)
+name:
+  - font-size: var(--header-stats-name-font-size)
+  - align-self: var(--header-stats-name-align-self)
+  - font-family: var(--header-stats-name-font-family)
+icon:
+  - align-self: var(--header-stats-icon-align-self)
+  - justify-self: var(--header-stats-icon-justify-self)
+card:
+  - background: var(--header-stats-card-background)
+  - max-height: var(--header-stats-card-max-height)
+  - min-width: var(--header-stats-card-min-width)
+  - max-width: var(--header-stats-card-max-width)
+  - margin: var(--header-stats-card-margin)

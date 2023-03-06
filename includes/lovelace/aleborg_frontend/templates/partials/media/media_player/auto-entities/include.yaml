@@ -1,0 +1,18 @@
+# Media player
+#############################################
+- name: "${setSource(SOURCE_NAME)}"
+  not:
+    device_manufacturer: Sonos
+  options: !include ../media_player.yaml
+# Browse button
+#############################################
+- name: "${setSource(SOURCE_NAME)}"
+  not:
+    device_manufacturer: Sonos
+  options: !include ../media_browse.yaml
+# Sonos player
+#############################################
+- name: "${setSource(SOURCE_NAME)}"
+  attributes:
+    media_content_id: "*sonos*"
+  options: !include ../../sonos/media_sonos.yaml

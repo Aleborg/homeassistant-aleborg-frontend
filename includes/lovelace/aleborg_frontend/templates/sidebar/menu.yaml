@@ -1,0 +1,43 @@
+# lovelace_gen
+#############################################
+
+# Loop all rooms
+#############################################
+- type: custom:mushroom-chips-card
+  alignment: center
+  chips:
+{% for room in _global.tablet.rooms|sort(attribute='sortOrder') %}
+  {% if room.isShortcut %}
+    - type: action
+      double_tap_action:
+        action: none
+      icon: "{{room.icon}}"
+      tap_action:
+        action: navigate
+        navigation_path: /{{_global.tablet.settings.dashboardPath}}/{{room.url}}
+      hold_action:
+        action: none
+  {% endif %}
+{% endfor %}
+
+{% for room in _global.tablet.rooms|sort(attribute='sortOrder') %}
+  {% if room.url == null and room.areaId == null %}
+# The floor titles
+#############################################
+# ToDo: make generic style of sizes
+- type: custom:mod-card
+  card_mod: !include styles/title_card_mod.yaml
+  card:
+      type: custom:mushroom-title-card
+      title: {{room.title}}
+  {% elif room.areaId %}
+# Links
+#############################################
+- type: custom:button-card
+  template: menu-item
+  variables:
+    title: {{room.title}}
+    areaid: {{room.areaId}}
+    icon: {{room.icon}}
+  {% endif %}
+{% endfor %}

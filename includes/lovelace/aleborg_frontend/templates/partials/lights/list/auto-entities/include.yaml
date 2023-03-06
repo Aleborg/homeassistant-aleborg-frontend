@@ -1,0 +1,11 @@
+# lovelace_gen
+- domain: light
+  area: {{title}}
+  options: !include
+    - ../light_list_dimmer.yaml
+    - entity: this.entity_id
+- domain: switch
+  area: {{title}}
+  options: !include
+    - ../light_list_switch.yaml
+    - entity: this.entity_id

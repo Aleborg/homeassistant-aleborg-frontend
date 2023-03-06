@@ -1,0 +1,5 @@
+style: |
+  ha-card {
+      background: var(--ha-card-no-background) !important;
+      box-shadow: var(--ha-card-box-shadow) !important;
+  }

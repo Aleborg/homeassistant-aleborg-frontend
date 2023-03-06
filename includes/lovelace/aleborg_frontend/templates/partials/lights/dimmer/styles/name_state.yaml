@@ -1,0 +1,12 @@
+- value: "on"
+  styles:
+    name:
+      - color: var(--state-label-on)
+    label:
+      - color: var(--state-label-on)
+- value: "off"
+  styles:
+    label:
+      - color: var(--state-label-off)
+    name:
+      - color: var(--button-card-light-color)

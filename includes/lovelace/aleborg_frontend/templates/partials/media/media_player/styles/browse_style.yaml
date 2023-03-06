@@ -1,0 +1,43 @@
+style: |
+  mwc-linear-progress {
+    display: none;
+  }
+  div.media-info {
+    display: none;
+  }
+  div.top-info {
+    display: none;
+  }
+  div.background {
+    display: none;
+  }
+  ha-icon-button {
+    display: none;
+  }
+  ha-icon-button.browse-media {
+    display: block;
+    width: 95%;
+    text-align: center;
+    padding-bottom: 6px;
+  }
+  div.title-controls {
+    padding: 0 0 0px;
+  }
+  .no-progress.player {
+    padding-bottom: 16px !important;
+  }
+  div.player {
+    color: inherit !important;
+  }
+  div.off {
+    display: none;
+  }
+  ha-card {
+    z-index: 100;
+    /*background: transparent;
+    margin-top: -60px;*/
+    position:relative;
+    box-shadow: none;
+
+    /*top:-8px*/
+  }

@@ -1,0 +1,5 @@
+style:
+  $: |
+    :host {
+      background: var(--ha-card-alt-background) !important;
+    }

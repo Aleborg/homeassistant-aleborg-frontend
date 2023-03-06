@@ -1,0 +1,16 @@
+# lovelace_gen
+
+# Media receiver card
+#############################################
+type: vertical-stack
+cards:
+  - type: custom:mini-media-player
+    entity: this.entity_id
+    group: true
+    source: full
+    icon: mdi:speaker-multiple
+    hide:
+      controls: true
+  # Media player card
+  #############################################
+  - !include ../media_player/media_player_card.yaml

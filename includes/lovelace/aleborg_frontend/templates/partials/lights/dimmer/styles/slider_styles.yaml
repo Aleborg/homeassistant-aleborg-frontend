@@ -1,0 +1,17 @@
+card:
+  - width: var(--dimmer-slider-card-width)
+  - margin: var(--dimmer-slider-card-margin)
+  - background: var(--dimmer-slider-card-background)
+container:
+  - max-height: var(--dimmer-slider-container-max-height)
+  - min-height: var(--dimmer-slider-container-min-height)
+  - width: var(--dimmer-slider-container-width)
+  - margin: var(--dimmer-slider-container-margin)
+track:
+  - background: var(--dimmer-slider-track-background)
+  - border-radius: var(--dimmer-slider-track-radius)
+thumb:
+  - height: var(--dimmer-slider-thumb-height)
+  - background: var(--dimmer-slider-thumb-background)
+progress:
+  - background: var(--dimmer-slider-progress-background)

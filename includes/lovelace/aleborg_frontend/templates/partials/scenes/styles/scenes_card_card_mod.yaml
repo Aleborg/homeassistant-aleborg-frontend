@@ -1,0 +1,6 @@
+style: 
+  .: |
+    .chip-container * {
+      margin-top: var(--scenes-card-margin-top) !important;
+      margin-bottom: var(--scenes-card-margin-bottom) !important;
+    }

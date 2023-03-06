@@ -1,0 +1,9 @@
+card:
+  - background: var(--dimmer-name-card-background)
+  - margin: var(--dimmer-name-card-margin)
+  - padding: var(--dimmer-name-card-padding)
+name:
+  - font-size: var(--dimmer-name-name-font-size)
+  - align-self: var(--dimmer-name-name-align-self)
+  - justify-self: var(--dimmer-name-name-justify-self)
+  - font-family: var(--secondary-font-family)

@@ -1,0 +1,5 @@
+place-content: start
+grid-template-columns: auto minmax(90px, max-content)
+mediaquery:
+  "(max-width: 786px)":
+    grid-template-columns: 1fr

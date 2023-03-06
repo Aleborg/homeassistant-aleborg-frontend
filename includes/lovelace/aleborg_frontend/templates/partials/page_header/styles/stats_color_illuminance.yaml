@@ -1,0 +1,150 @@
+- value: 10
+  operator: '<'
+  styles:
+    state:
+      - color: "#663f00"
+- value: 20
+  operator: '<'
+  styles:
+    state:
+      - color: "#6d4609"
+- value: 30
+  operator: '<'
+  styles:
+    state:
+      - color: "#734d13"
+- value: 40
+  operator: '<'
+  styles:
+    state:
+      - color: "#7a541b"
+- value: 50
+  operator: '<'
+  styles:
+    state:
+      - color: "#805b23"
+- value: 60
+  operator: '<'
+  styles:
+    state:
+      - color: "#86612b"
+- value: 70
+  operator: '<'
+  styles:
+    state:
+      - color: "#8b6833"
+- value: 80
+  operator: '<'
+  styles:
+    state:
+      - color: "#916e3b"
+- value: 90
+  operator: '<'
+  styles:
+    state:
+      - color: "#977442"
+- value: 100
+  operator: '<'
+  styles:
+    state:
+      - color: "#9d7a49"
+- value: 110
+  operator: '<'
+  styles:
+    state:
+      - color: "#a38150"
+- value: 120
+  operator: '<'
+  styles:
+    state:
+      - color: "#a88758"
+- value: 130
+  operator: '<'
+  styles:
+    state:
+      - color: "#ad8d5f"
+- value: 140
+  operator: '<'
+  styles:
+    state:
+      - color: "#b29366"
+- value: 150
+  operator: '<'
+  styles:
+    state:
+      - color: "#b7996c"
+- value: 160
+  operator: '<'
+  styles:
+    state:
+      - color: "#bc9f73"
+- value: 170
+  operator: '<'
+  styles:
+    state:
+      - color: "#c1a47a"
+- value: 180
+  operator: '<'
+  styles:
+    state:
+      - color: "#c6aa80"
+- value: 190
+  operator: '<'
+  styles:
+    state:
+      - color: "#ccb087"
+- value: 200
+  operator: '<'
+  styles:
+    state:
+      - color: "#d0b58d"
+- value: 210
+  operator: '<'
+  styles:
+    state:
+      - color: "#d5bb93"
+- value: 220
+  operator: '<'
+  styles:
+    state:
+      - color: "#d9c19a"
+- value: 230
+  operator: '<'
+  styles:
+    state:
+      - color: "#dec6a0"
+- value: 240
+  operator: '<'
+  styles:
+    state:
+      - color: "#e3cca6"
+- value: 250
+  operator: '<'
+  styles:
+    state:
+      - color: "#e7d1ac"
+- value: 260
+  operator: '<'
+  styles:
+    state:
+      - color: "#ecd6b3"
+- value: 270
+  operator: '<'
+  styles:
+    state:
+      - color: "#f1dcb9"
+- value: 280
+  operator: '<'
+  styles:
+    state:
+      - color: "#f5e1bf"
+- value: 290
+  operator: '<'
+  styles:
+    state:
+      - color: "#fae6c5"
+- value: 290
+  operator: '>'
+  styles:
+    state:
+      - color: "#ffeccc"

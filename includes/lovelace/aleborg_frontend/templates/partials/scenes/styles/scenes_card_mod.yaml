@@ -1,0 +1,8 @@
+style: 
+  .: |
+    ha-card {
+      height: var(--scenes-button-height) !important;
+    }
+    .content {
+      padding: var(--scenes-button-padding) !important;
+    }

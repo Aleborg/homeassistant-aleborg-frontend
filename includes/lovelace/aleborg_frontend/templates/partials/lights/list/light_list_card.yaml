@@ -1,0 +1,21 @@
+# lovelace_gen
+
+# Displays a list of all lights in an area
+# Displays the on/off switches
+#############################################
+type: custom:layout-card
+layout_type: masonry
+cards:
+  - type: custom:auto-entities
+    show_empty: false
+    card:
+      type: entities
+      title: {{ title }}
+      show_header_toggle: false
+      card_mod: !include ../../styles/ha-card-alt-background.yaml
+    card_param: entities
+    filter:
+      include: !include
+        - auto-entities/include.yaml
+        - title: {{ title }}
+      exclude: !include auto-entities/exclude.yaml

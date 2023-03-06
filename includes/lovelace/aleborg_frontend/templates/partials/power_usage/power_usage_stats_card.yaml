@@ -1,0 +1,9 @@
+# lovelace_gen
+
+type: gauge
+entity: "{{entity}}"
+needle: true
+min: {{min_seg}}
+max: {{max_seg}}
+card_mod: !include ../styles/ha-card-alt-background.yaml
+segments: !include styles/segments_{{min_seg}}_{{max_seg}}.yaml

@@ -1,0 +1,14 @@
+# lovelace_gen
+
+# Retrieves and displays all calendars for an area
+type: custom:auto-entities
+card:
+  type: vertical-stack
+card_param: cards
+#show_empty: false
+card_mod: !include ../styles/ha-card-no-background.yaml
+filter:
+  include:
+    - domain: calendar
+      area: {{ title }}
+      options: !include ../calendar/calendar.yaml

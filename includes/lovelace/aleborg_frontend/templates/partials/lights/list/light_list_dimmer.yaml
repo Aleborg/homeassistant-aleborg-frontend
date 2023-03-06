@@ -1,0 +1,19 @@
+# lovelace_gen
+
+# Dimmer card for the all lights list page
+# Displays the on/off switches
+#############################################
+type: custom:mushroom-light-card
+card_mod: !include ../../styles/ha-card-no-background.yaml
+layout: horizontal
+entity: this.entity_id
+primary_info: name
+secondary_info: state
+icon_type: icon
+show_brightness_control: true
+tap_action:
+  action: toggle
+hold_action:
+  action: none
+double_tap_action:
+  action: none

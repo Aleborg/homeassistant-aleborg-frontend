@@ -1,0 +1,17 @@
+# lovelace_gen
+
+type: entity
+entity: {{entity}}
+double_tap_action:
+  action: more-info
+content_info: name
+use_entity_picture: false
+tap_action:
+  action: call-service
+  service: scene.turn_on
+  data: {}
+  target:
+    entity_id: {{entity}}
+hold_action:
+  action: none
+card_mod: !include styles/scenes_card_mod.yaml

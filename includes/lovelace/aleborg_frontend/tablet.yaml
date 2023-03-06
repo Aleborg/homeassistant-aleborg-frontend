@@ -1,0 +1,12 @@
+# Templates
+#############################################
+button_card_templates: !include templates/sidebar/menu-item.yaml
+
+# Kiosk mode
+kiosk_mode: !include common/kiosk_mode.yaml
+
+# Swipe navigation
+swipe_nav: !include common/swipe_nav.yaml
+
+# All views
+views: !include common/views.yaml

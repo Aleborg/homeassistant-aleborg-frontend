@@ -1,0 +1,12 @@
+- value: "on"
+  styles:
+    card:
+      - background: "var(--switch-state-on-card-background)"
+    name:
+      - color: "var(--switch-state-on-name-color)"
+    icon:
+      - color: "var(--switch-state-on-icon-color)"
+- value: "off"
+  styles:
+    name:
+      - color: "var(--switch-state-off-name-color)"

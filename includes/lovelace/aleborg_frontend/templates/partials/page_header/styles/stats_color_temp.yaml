@@ -1,0 +1,82 @@
+# For some reason this include file doesn't work in stats_temp.yaml
+- value: -20
+  operator: '<'
+  styles:
+    state:
+      - color: "#0000b3"
+- value: -15
+  operator: '<'
+  styles:
+    state:
+      - color: "#274eb2"
+- value: -10
+  operator: '<'
+  styles:
+    state:
+      - color: "#526390"
+- value: -5
+  operator: '<'
+  styles:
+    state:
+      - color: "#6f7284"
+- value: 0
+  operator: '<'
+  styles:
+    state:
+      - color: "#868082"
+- value: 0
+  operator: '>'
+  styles:
+    state:
+      - color: "#868082"
+- value: 5
+  operator: '>'
+  styles:
+    state:
+      - color: "#a48a75"
+- value: 10
+  operator: '>'
+  styles:
+    state:
+      - color: "#c19461"
+- value: 15
+  operator: '>'
+  styles:
+    state:
+      - color: "#de9c44"
+- value: 20
+  operator: '>'
+  styles:
+    state:
+      - color: "#ffa200"
+- value: 25
+  operator: '>'
+  styles:
+    state:
+      - color: "#f08f02"
+- value: 30
+  operator: '>'
+  styles:
+    state:
+      - color: "#dc7904"
+- value: 35
+  operator: '>'
+  styles:
+    state:
+      - color: "#c86104"
+- value: 40
+  operator: '>'
+  styles:
+    state:
+      - color: "#b14703"
+- value: 45
+  operator: '>'
+  styles:
+    state:
+      - color: "#972a01"
+- value: 50
+  operator: '>'
+  styles:
+    state:
+      - color: "#7a0000"
+      

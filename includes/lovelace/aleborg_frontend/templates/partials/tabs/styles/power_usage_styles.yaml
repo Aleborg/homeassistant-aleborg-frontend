@@ -1,0 +1,4 @@
+--mdc-theme-primary: var(--tabs-power-icon-active)
+--mdc-tab-text-label-color-default: var(--tabs-power-icon-inactive)
+--mdc-tab-color-default: rgba(199, 0, 0, 0.6)
+--mdc-tab-horizontal-padding: var(--tabs-power-horizontal-padding)

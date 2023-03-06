@@ -1,0 +1,17 @@
+# lovelace_gen
+
+# Media card
+#############################################
+type: custom:auto-entities
+card:
+  type: custom:layout-card
+  layout_type: grid
+#show_empty: false
+unique: true
+card_param: cards
+card_mod: !include styles/card_mod.yaml
+filter:
+  include: !include
+    - auto-entities/include.yaml
+    - title: {{title}}
+  exclude: !include auto-entities/exclude.yaml

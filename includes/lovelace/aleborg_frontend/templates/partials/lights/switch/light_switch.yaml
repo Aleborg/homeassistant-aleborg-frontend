@@ -1,0 +1,15 @@
+# lovelace_gen
+
+# Switch card, displays the on/off switches
+#############################################
+type: custom:button-card
+entity: "{{entity}}"
+show_name: true
+layout: vertical
+tap_action:
+  action: toggle
+double_tap_action:
+  action: more-info
+styles: !include styles/styles.yaml
+card_mod: !include styles/card_mod.yaml
+state: !include styles/state.yaml

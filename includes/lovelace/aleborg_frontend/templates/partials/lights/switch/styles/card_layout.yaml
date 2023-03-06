@@ -1,0 +1,11 @@
+grid-template-columns: repeat(auto-fill, minmax(90px, 120px))
+grid-column-gap: 10px
+grid-row-gap: 10px
+
+#column_widths: 120
+#justify-content: start
+#justify-items: start
+#width: 100
+mediaquery:
+  "(max-width: 480px)":
+    grid-template-columns: repeat(auto-fill,minmax(70px, 90px))

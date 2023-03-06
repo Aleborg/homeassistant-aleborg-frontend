@@ -1,0 +1,28 @@
+# lovelace_gen
+
+theme: {{_global.tablet.settings.theme}}
+title: {{area}}
+path: {{url}}
+icon: {{icon}}
+type: custom:ha-dashboard
+usePanel: true
+style: !include ../templates/sidebar/styles/styles.yaml
+sidebar: 
+  stickyCards:
+    - type: custom:digital-clock
+      locale: sv
+  cards: !include ../templates/sidebar/menu.yaml
+      
+cards:
+  - type: custom:zigbee2mqtt-networkmap
+    entity: sensor.zigbee2mqtt_networkmap
+    # the following are optional:
+    mqtt_base_topic: zigbee2mqtt # if you change base_topic of Zigbee2mqtt, change it accordingly
+    force: 1500 # decrease it to get smaller map if you have many devices
+    node_size: 17
+    font_size: 12
+    link_width: 1
+    card_mod: !include ../templates/partials/styles/ha-card-alt-background.yaml
+    height: 750 # height of the card
+    # use this css config or use whatever css tech to change look and feel,
+    # the same variable can also be used in Home Assistant themes, see https://www.home-assistant.io/components/frontend/#defining-themes

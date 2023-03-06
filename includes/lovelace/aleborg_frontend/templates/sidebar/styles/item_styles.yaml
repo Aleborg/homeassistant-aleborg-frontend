@@ -1,0 +1,20 @@
+grid:
+  - grid-template-areas: '"i n"'
+  - grid-template-columns: 20% 1fr
+card:
+  - border-radius: var(--sidebar-menu-item-card-border-radius)
+  - margin: "var(--sidebar-menu-item-card-margin) !important"
+  - background: >
+      [[[ return variables.view == variables.areaid
+          ? 'var(--sidebar-menu-item-card-active-background)' : 'var(--sidebar-menu-item-card-inactive-background)';
+      ]]]
+name:
+  - place-self: var(--sidebar-menu-item-name-place-self)
+  - text-align: var(--sidebar-menu-item-name-text-align)
+  - font-size: var(--sidebar-menu-item-name-font-size)
+  - font-family: var(--secondary-font-family)
+icon:
+  - color: >
+      [[[ return variables.view == variables.areaid
+          ? 'var(--sidebar-menu-item-icon-active-color)' : 'var(--sidebar-menu-item-icon-inactive-color)';
+      ]]]

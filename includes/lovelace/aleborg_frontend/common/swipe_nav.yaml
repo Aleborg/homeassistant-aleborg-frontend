@@ -1,0 +1,7 @@
+# Settings for the swipe navigation
+# Makes it possible to swipe between pages
+# More settings can be found here: https://github.com/zanna-37/hass-swipe-navigation
+wrap: false
+animate: swipe
+prevent_default: true
+swipe_amount: 30

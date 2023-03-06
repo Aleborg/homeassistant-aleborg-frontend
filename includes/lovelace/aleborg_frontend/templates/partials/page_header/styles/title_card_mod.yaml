@@ -1,0 +1,15 @@
+style: 
+  mushroom-title-card$: 
+    .: |
+      h1.title {
+        justify-content: var(--header-title-justify-content);
+        align-items: var(--header-title-align-items);
+        font-size: var(--header-title-font-size);
+        font-weight: var(--header-title-font-weight);
+        font-family: var(--header-title-font-family);
+        text-align: var(--header-title-text-align);
+        white-space: var(--header-title-white-space) !important;
+      }
+      .header {
+        padding: var(--header-title-padding) !important;
+      }

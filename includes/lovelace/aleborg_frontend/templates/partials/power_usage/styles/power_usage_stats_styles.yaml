@@ -1,0 +1,7 @@
+card:
+  - max-width: var(--power-usage-card-max-width)
+  - max-height: var(--power-usage-card-max-height)
+name:
+  - font-size: var(--power-usage-name-font-size)
+icon:
+  - --mdc-icon-size: var(--power-usage-icon-size)

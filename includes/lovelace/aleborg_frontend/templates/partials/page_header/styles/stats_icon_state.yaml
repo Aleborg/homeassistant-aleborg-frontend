@@ -1,0 +1,9 @@
+- value: "on"
+  styles:
+    icon:
+      - color: var(--header-stats-icon-state-on-color)
+- value: "off"
+  icon: mdi:motion-sensor-off
+  styles:
+    icon:
+      - color: var(--header-stats-icon-state-off-color)

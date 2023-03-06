@@ -1,0 +1,11 @@
+SOURCE_NAME: states['this.entity_id'].attributes.source
+setSource: |
+  source => {
+    if(source){
+      return source;
+    }
+    else
+    {
+      return 'none_source_choosen';
+    }
+  }

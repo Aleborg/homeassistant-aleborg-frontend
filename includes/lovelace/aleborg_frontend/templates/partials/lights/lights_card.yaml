@@ -1,0 +1,41 @@
+# lovelace_gen
+
+# Lights card
+# Displays all dimmers and switches
+#############################################
+type: custom:layout-card
+layout_type: grid
+layout: !include styles/card_layout.yaml
+show_header_toggle: false
+cards:
+  # Dimmers, light_dimmer.yaml
+  #############################################
+  - type: custom:auto-entities
+    card:
+      type: custom:layout-card
+      layout_type: grid
+      layout: !include dimmer/styles/card_layout.yaml
+
+    card_param: cards
+    filter:
+      include: !include
+        - dimmer/auto-entities/include.yaml
+        - title: {{title}}
+      exclude: !include dimmer/auto-entities/exclude.yaml
+
+  # Switches, light_switch.yaml
+  #############################################
+  - type: custom:auto-entities
+    card:
+      type: custom:layout-card
+      layout_type: grid
+      layout: !include switch/styles/card_layout.yaml
+
+    card_param: cards
+    #show_empty: false
+    filter:
+      include: !include
+        - switch/auto-entities/include.yaml
+        - title: {{title}}
+      exclude: !include switch/auto-entities/exclude.yaml
+

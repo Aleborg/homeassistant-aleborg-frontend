@@ -1,0 +1,6 @@
+style: |
+  @media screen and (max-width: 480px) {
+    #name {
+      font-size: var(--dimmer-name-max480-font-size) !important;
+    }
+  }

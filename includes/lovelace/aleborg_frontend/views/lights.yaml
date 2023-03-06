@@ -1,0 +1,34 @@
+# lovelace_gen
+
+# Lists all lights on one page
+#############################################
+theme: {{_global.tablet.settings.theme}}
+title: {{title}}
+path: {{url}}
+icon: {{icon}}
+type: custom:ha-dashboard
+usePanel: true
+style: !include ../templates/sidebar/styles/styles.yaml
+sidebar: 
+  stickyCards:
+    - type: custom:digital-clock
+      locale: sv
+  cards: !include ../templates/sidebar/menu.yaml
+      
+cards:
+  - type: vertical-stack
+    title: "{{title}}"
+    cards:
+      - type: custom:layout-card
+        layout_type: masonry
+        cards:
+      {% for room in _global.tablet.rooms|sort(attribute='sortOrder') %}
+      {% if room.areaId %}
+          # Include the card
+          #############################################
+          - !include
+            - ../templates/partials/lights/list/light_list_card.yaml
+            - title: {{ room.title }}
+      {% endif %}
+      {% endfor %}
+

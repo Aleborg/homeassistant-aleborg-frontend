@@ -1,0 +1,7 @@
+style:
+  .: |
+    :host {
+      overflow: var(--header-stats-card-mod-overflow);
+      margin: var(--header-stats-card-mod-margin) !important;
+      padding-top: var(--header-card-mod-stats-padding-top);
+    }

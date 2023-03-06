@@ -1,0 +1,20 @@
+type: custom:button-card
+entity: "this.entity_id"
+layout: vertical
+show_icon: false
+show_state: true
+view_layout:
+  justify-self: stretch
+  align-items: stretch
+styles: !include styles/stats_text_styles.yaml
+state: 
+  - value: 0
+    operator: "<"
+    styles:
+      state:
+        - color: "rgb(102, 163, 255)"
+  - value: 0
+    operator: ">"
+    styles:
+      state:
+        - color: "rgb(255, 77, 77)"

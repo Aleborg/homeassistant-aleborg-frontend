@@ -1,0 +1,20 @@
+# Menu items
+#############################################
+menu-item:
+  variables:
+    title: Hem
+    icon: handle
+    areaid: home
+    view: >
+      [[[ return window.location.pathname.split('/').slice(-1) ]]]
+  icon: "[[[return variables.icon]]]"
+  name: "[[[return variables.title]]]"
+  layout: icon_name
+  color_type: card
+  color: rgba(45,88,132)
+  tap_action:
+    action: navigate
+    navigation_path: "[[[return variables.areaid]]]"
+  styles: !include styles/item_styles.yaml
+  extra_styles: |
+    :host { margin: 1px 0 !important; }

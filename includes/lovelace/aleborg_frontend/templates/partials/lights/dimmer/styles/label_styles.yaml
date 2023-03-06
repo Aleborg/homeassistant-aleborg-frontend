@@ -1,0 +1,7 @@
+card:
+  - background: var(--dimmer-label-card-background)
+label:
+  - font-size: var(--dimmer-label-label-font-size)
+  - align-self: var(--dimmer-label-label-align-self)
+  - justify-self: var(--dimmer-label-label-justify-self)
+  - font-weight: var(--dimmer-label-label-font-weight)

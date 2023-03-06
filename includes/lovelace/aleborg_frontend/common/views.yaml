@@ -1,0 +1,22 @@
+# lovelace_gen
+
+# Generate all pages
+#############################################
+{% for room in _global.tablet.rooms|sort(attribute='sortOrder') %}
+  {% if room.url or room.areaId %}
+- !include 
+    {% if room.file %}
+  - ../views/{{ room.file }}
+    {% else %}
+  - ../views/page.yaml
+    {% endif %}
+  - title: {{ room.title }}
+    {% if room.areaId %}
+    areaId: {{ room.areaId }}
+    {% endif %}
+    {% if room.url %}
+    url: {{ room.url }}
+    {% endif %}
+    icon: {{ room.icon }}
+  {% endif %}
+{% endfor %}

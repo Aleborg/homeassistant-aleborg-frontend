@@ -1,0 +1,217 @@
+settings: 
+  theme: "Aleborg Material"
+  dashboardPath: "lovelace-aleborg"
+  header: 
+      showTemperatureSensors: true
+      showHumiditySensors: true
+      showMotionSensors: true
+      showPresenceSensors: true
+      showIlluminanceSensors: true
+
+  tabs:
+    showLights: true
+    lightsIcon: mdi:lightbulb-on-10
+    showMedia: true
+    mediaIcon: mdi:music
+    showCalendar: true
+    calendarIcon: mdi:calendar
+    showPower: true
+    powerIcon: fapro:usage
+
+  excludeEntities: 
+      lights: 
+        entities: 
+          - "switch.sp001_switch_power_monitor_belysning_koket"
+          - "switch.wifi_plug_4_socket_1"
+          - "switch.frys_socket_1"
+          - "switch.fryslada_socket_1"
+          - "switch.wifi_plug_5_socket_1"
+          - "*_flip*"
+          - "*_temperature*"
+          - "*_watermark*"
+          - "switch.sa0*"
+          - "switch.enable_notification"
+          - "switch.cups_light"       
+        state: 
+          - "unavailable"
+          - "unknown"     
+        hidden_by: 
+          - "user"
+          - "integration"
+
+      media:
+        state:
+          - "unknown"
+        hidden_by: 
+          - "user"
+          - "integration"
+
+      page_header:
+        entities:
+          - "sensor.sa001_siren_alarm_korridoren_ovre_hallen_temperature"
+          - "sensor.sa001_siren_alarm_korridoren_ovre_hallen_humidity"
+        state:
+          - "unavailable"
+          - "unknown"
+        hidden_by: 
+          - "user"
+          - "integration"
+
+      power_usage:
+        state:
+          - "unavailable"
+          - "unknown"
+        hidden_by: 
+          - "user"
+          - "integration"
+      scenes:
+        state:
+          - "unavailable"
+          - "unknown"
+        hidden_by: 
+          - "user"
+          - "integration"
+
+  translations: 
+    "OFF": "AV"
+    power:
+      powerConsumptionNow: "Förbrukning just nu"
+      powerConsumptionToday: "Förbrukning idag"
+      powerConsumptionWeek: "Förbrukning senaste veckan"
+      powerConsumptionMonth: "Förbrukning senaste månaden"
+      powerConsumptionYear: "Förbrukning senaste året"
+    home:
+      apexCardElectricityPrices: "Elpriser"
+      apexCardRightNow: "Just nu"
+      apexCardToday: "Idag"
+      apexCardElectricityTransfer: 18.55
+      apexCardElectricityTax: 49
+      chartsWarmWater: "Varmvatten"
+      chartsOutdoorTemperature: "Utomhus"
+      chartsFloorTemperature: "Golvvärme"
+  
+  powerConsumptions:
+    maxSegmentCurrent: 100
+    maxSegmentDaily: 40
+    maxSegmentWeekly: 20
+    maxSegmentMonthly: 20
+    maxSegmentYearly: 60
+
+rooms:
+  - title: "Hem"
+    url: "home"
+    file: "home.yaml"
+    icon: "fapro:handle"
+    isShortcut: true
+    sortOrder: 0
+  
+  - title: "Belysning" 
+    url: "lights"
+    file: "lights.yaml"
+    icon: "mdi:lightbulb-group-outline"
+    isShortcut: true
+    sortOrder: 1
+  
+  - title: "Zigbee-Map" 
+    url: "zigbeemap"
+    file: "zigbeemap.yaml"
+    icon: "mdi:zigbee"
+    isShortcut: true
+    sortOrder: 2
+  
+  - title: "Övre plan"
+    sortOrder: 3
+  
+  - title: "Entrén" 
+    areaId: "entre"
+    icon: "fapro:walking-man"
+    sortOrder: 4
+  
+  - title: "Övre hallen" 
+    areaId: "ovre_hallen"
+    icon: "fapro:hallway"
+    sortOrder: 5
+  
+  - title: "Köket" 
+    areaId: "kok"
+    icon: "fapro:kitchen"
+    sortOrder: 6
+  
+  - title: "Matsalen" 
+    areaId: "matplats"
+    icon: "fapro:dinner"
+    sortOrder: 7
+  
+  - title: "Vardagsrummet" 
+    areaId: "vardagsrum"
+    icon: "fapro:livingroom"
+    sortOrder: 8
+  
+  - title: "Kontoret" 
+    areaId: "kontoret"
+    icon: "fapro:working-with-laptop"
+    sortOrder: 9
+  
+  - title: "Master Bedroom" 
+    areaId: "sovrum"
+    icon: "fapro:bedroom"
+    sortOrder: 10
+  
+  - title: "Master Shithouse" 
+    areaId: "master_shithouse"
+    icon: "fapro:bathroom"
+    sortOrder: 11
+  
+  - title: "Nedre plan" 
+    sortOrder: 12
+  
+  - title: "Nedre hallen" 
+    areaId: "nedre_hall"
+    icon: "fapro:stairs-2"
+    sortOrder: 13
+  
+  - title: "Nedre badrummet" 
+    areaId: "barnens_badrum"
+    icon: "fapro:underarm"
+    sortOrder: 14
+  
+  - title: "Noahs rum" 
+    areaId: "noahs_rum"
+    icon: "fapro:businesswoman"
+    sortOrder: 15
+  
+  - title: "Elliots rum" 
+    areaId: "elliots_rum"
+    icon: "fapro:boy"
+    sortOrder: 16
+  
+  - title: "Vincents rum" 
+    areaId: "vincents_rum"
+    icon: "fapro:man-in-suit-and-tie"
+    sortOrder: 17
+  
+  - title: "Uterummet" 
+    areaId: "lounge"
+    icon: "fapro:bar-counter"
+    sortOrder: 18
+  
+  - title: "Gymmet" 
+    areaId: "gym"
+    icon: "fapro:weightlifting"
+    sortOrder: 19
+  
+  - title: "SPA't" 
+    areaId: "spa"
+    icon: "fapro:spa"
+    sortOrder: 20
+  
+  - title: "Tvättstugan" 
+    areaId: "tvattstugan"
+    icon: "fapro:laundry"
+    sortOrder: 21
+  
+  - title: "Förrådet" 
+    areaId: "forradet"
+    icon: "fapro:closet"
+    sortOrder: 22
+

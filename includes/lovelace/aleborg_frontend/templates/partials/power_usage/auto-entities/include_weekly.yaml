@@ -1,0 +1,15 @@
+# lovelace_gen
+
+# Energy meters
+#############################################
+- domain: sensor
+  area: "{{title}}"
+  state: "> 0.99"
+  attributes:
+    device_class: energy
+    meter_period: "weekly"
+  options: !include
+    - ../power_usage_stats_card.yaml
+    - entity: this.entity_id
+      min_seg: 0
+      max_seg: {{_global.tablet.settings.powerConsumptions.maxSegmentWeekly}}

@@ -1,0 +1,43 @@
+type: custom:vertical-stack-in-card
+card_mod: !include ../../styles/ha-card-alt-background.yaml
+cards:
+  - type: custom:mini-media-player
+    entity: this.entity_id
+    group: true
+    icon: mdi:rotate-orbit
+    hide:
+      controls: false
+  - type: custom:layout-card
+    layout_type: grid
+    layout:
+      grid-template-columns: auto minmax(50px, max-content)
+    cards:
+      - type: entities
+        entities:
+          - entity: input_text.text_to_speach
+        card_mod: !include ../../styles/ha-card-no-background.yaml
+      - type: custom:mushroom-chips-card
+        card_mod:
+          style: |
+            ha-card {
+              background: none;
+              border: none;
+              box-shadow: none;
+              padding-top: 25px;
+            }
+
+        alignment: justify
+        chips:
+          - type: entity
+            entity: this.entity_id
+            icon: mdi:bullhorn-variant-outline
+            double_tap_action:
+              action: none
+            tap_action:
+              action: call-service
+              service: script.announce_in_house
+              service_data:
+                entityid: this.entity_id
+              target: {}
+            hold_action:
+              action: none

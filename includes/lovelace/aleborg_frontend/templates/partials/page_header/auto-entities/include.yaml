@@ -1,0 +1,51 @@
+# lovelace_gen
+
+# Temperature Sensors
+#############################################
+{% if _global.tablet.settings.header.showTemperatureSensors %}
+- domain: sensor
+  area: "{{title}}"
+  attributes:
+    device_class: temperature
+  options: !include ../stats_temp.yaml
+{% endif %}
+
+# Humidity Sensors
+#############################################
+{% if _global.tablet.settings.header.showHumiditySensors %}
+- domain: sensor
+  area: "{{title}}"
+  attributes:
+    device_class: humidity
+  options: !include ../stats_humidity.yaml
+{% endif %}
+ 
+# Motion Sensors
+#############################################
+{% if _global.tablet.settings.header.showMotionSensors %}
+- domain: binary_sensor
+  area: "{{title}}"
+  attributes:
+    device_class: motion
+  options: !include ../stats_motion.yaml
+{% endif %}
+
+# Presence Sensors
+#############################################
+{% if _global.tablet.settings.header.showPresenceSensors %}
+- domain: binary_sensor
+  area: "{{title}}"
+  attributes:
+    device_class: presence
+  options: !include ../stats_presence.yaml
+{% endif %}
+
+# Illuminance Sensors
+#############################################
+{% if _global.tablet.settings.header.showIlluminanceSensors %}
+- domain: sensor
+  area: "{{title}}"
+  attributes:
+    device_class: illuminance
+  options: !include ../stats_illuminance.yaml
+{% endif %}

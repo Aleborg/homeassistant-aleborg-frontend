@@ -1,0 +1,33 @@
+# lovelace_gen
+
+# Receivers and speakers
+#############################################
+- entity_id: media_player.*
+  area: {{title}}
+  not:
+    integration: "cast"
+  or:
+    - attributes:
+        device_class: speaker
+    - attributes:
+        device_class: receiver
+  options: !include ../receiver/media_receiver.yaml
+
+  # Chromecast speakers
+  #############################################
+- entity_id: media_player.*
+  area: {{title}}
+  integration: "cast"
+  not:
+    - attributes:
+        device_class: tv
+  options: !include ../cast/media_cast_speaker.yaml
+  
+  # Chromecast TV's
+  #############################################
+- entity_id: media_player.*
+  area: {{title}}
+  integration: "cast"
+  attributes:
+    device_class: tv
+  options: !include ../cast/media_cast_tv.yaml

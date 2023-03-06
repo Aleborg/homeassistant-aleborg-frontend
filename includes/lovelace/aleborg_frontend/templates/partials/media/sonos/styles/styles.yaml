@@ -1,0 +1,7 @@
+media-button-title:
+  text-align: "var(--sonos-media-button-title-text-align)"
+  padding-left: "var(--sonos-media-button-title-padding-left)"
+button-section:
+  padding: "var(--sonos-card-padding)"
+ha-card:
+  width: 80%

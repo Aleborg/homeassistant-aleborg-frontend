@@ -1,0 +1,99 @@
+# lovelace_gen
+
+# Power usage card
+#############################################
+type: vertical-stack
+show_header_toggle: false
+view_layout:
+  column: 1
+cards:
+  # Energy graph, current
+  #############################################
+  {% if _global.tablet.settings.translations.power.powerConsumptionNow %}
+  - type: custom:mushroom-title-card
+    title: {{_global.tablet.settings.translations.power.powerConsumptionNow}}
+  - type: custom:auto-entities
+    card:
+      type: custom:layout-card
+      layout_type: horizontal
+    #show_empty: false
+    card_param: cards
+    filter:
+      include: !include
+        - auto-entities/include_current.yaml
+        - title: {{title}}
+      exclude: !include auto-entities/exclude.yaml
+  {% endif %}
+
+  # Energy graph, daily
+  #############################################
+  {% if _global.tablet.settings.translations.power.powerConsumptionToday %}
+  - type: custom:mushroom-title-card
+    title: {{_global.tablet.settings.translations.power.powerConsumptionToday}}
+  - type: custom:auto-entities
+    card:
+      type: custom:layout-card
+      layout_type: horizontal
+    #show_empty: false
+    card_param: cards
+    filter:
+      include: !include
+        - auto-entities/include_daily.yaml
+        - title: {{title}}
+      exclude: !include auto-entities/exclude.yaml
+  {% endif %}
+
+  # Energy graph, weekly
+  #############################################
+  {% if _global.tablet.settings.translations.power.powerConsumptionWeek %}
+  - type: custom:mushroom-title-card
+    title: {{_global.tablet.settings.translations.power.powerConsumptionWeek}}
+  - type: custom:auto-entities
+    card:
+      type: custom:layout-card
+      layout_type: horizontal
+    #show_empty: false
+    card_param: cards
+    filter:
+      include: !include
+        - auto-entities/include_weekly.yaml
+        - title: {{title}}
+      exclude: !include auto-entities/exclude.yaml
+  {% endif %}
+
+  # Energy graph, monthly
+  #############################################
+{% if _global.tablet.settings.translations.power.powerConsumptionMonth %}
+  - type: custom:mushroom-title-card
+    title: {{_global.tablet.settings.translations.power.powerConsumptionMonth}}
+  - type: custom:auto-entities
+    card:
+      type: custom:layout-card
+      layout_type: horizontal
+      hours_to_show: 24 * 30
+    #show_empty: false
+    card_param: cards
+    filter:
+      include: !include
+        - auto-entities/include_monthly.yaml
+        - title: {{title}}
+      exclude: !include auto-entities/exclude.yaml
+  {% endif %}
+
+  # Energy graph, yearly
+  #############################################
+  {% if _global.tablet.settings.translations.power.powerConsumptionYear %}
+  - type: custom:mushroom-title-card
+    title: {{_global.tablet.settings.translations.power.powerConsumptionYear}}
+  - type: custom:auto-entities
+    card:
+      type: custom:layout-card
+      layout_type: horizontal
+    #show_empty: false
+    card_param: cards
+    filter:
+      include: !include
+        - auto-entities/include_yearly.yaml
+        - title: {{title}}
+      exclude: !include auto-entities/exclude.yaml
+  {% endif %}

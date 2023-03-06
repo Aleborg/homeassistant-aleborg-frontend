@@ -1,0 +1,12 @@
+.: |
+  .sidebar {
+    margin: var(--sidebar-style-margin) !important;
+    border-radius: var(--sidebar-style-border-radius);
+    background: var(--sidebar-background-color) !important;
+  }
+  .sticky-cards {
+    background: var(--sidebar-style-sticky-cards-background);
+  }
+  .content-wrapper {
+    overflow-y: var(--sidebar-style-overflow-y) !important;
+  }

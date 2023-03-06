@@ -1,0 +1,9 @@
+# lovelace_gen
+
+# Scenes
+#############################################
+- domain: scene
+  area: "{{title}}"
+  options: !include
+    - ../scenes.yaml
+    - entity: "this.entity_id"

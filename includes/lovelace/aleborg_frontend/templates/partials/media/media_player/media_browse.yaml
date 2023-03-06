@@ -1,0 +1,8 @@
+type: media-control
+card_mod: !include styles/browse_style.yaml
+hide:
+  volume: true
+  mute: true
+  shuffle: false
+  power: true
+  source: true

@@ -1,0 +1,10 @@
+type: custom:button-card
+entity: "this.entity_id"
+layout: name_state
+show_state: false
+show_label: false
+view_layout:
+  justify-self: stretch
+  align-items: stretch
+styles: !include styles/stats_icon_styles.yaml
+state: !include styles/stats_icon_state.yaml

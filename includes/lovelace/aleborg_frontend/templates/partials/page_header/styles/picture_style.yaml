@@ -1,0 +1,11 @@
+|
+  :host {
+    margin: var(--header-picture-margin) !important;
+  }
+  ha-card img {
+    max-height: var(--header-picture-max-height);
+    max-width: var(--header-picture-max-width);
+  }
+  .container {
+    display: var(--header-picture-container-display) !important;
+  }

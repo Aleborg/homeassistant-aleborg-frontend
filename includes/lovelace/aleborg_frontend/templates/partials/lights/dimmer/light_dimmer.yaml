@@ -1,0 +1,74 @@
+# lovelace_gen
+
+# Dimmer card, displays the verical dimmer
+#############################################
+type: custom:mod-card
+card_mod: !include styles/card_mod.yaml
+card:
+  type: custom:layout-card
+  layout_type: grid
+  layout: !include styles/layout.yaml
+  view_layout:
+    grid-row: auto / span 4
+  cards:
+    # Top icon
+    #############################################
+    - type: custom:button-card
+      view_layout:
+        grid-area: header
+      entity: "{{entity}}"
+      show_name: false
+      layout: vertical
+      double_tap_action:
+        action: more-info
+      styles:
+        card:
+          - background: transparent
+          - margin: "var(--masonry-view-card-margin, 4px) !important"
+
+    # Slider
+    #############################################
+    - type: custom:my-slider-v2
+      card_mod: !include styles/slider_card_mod.yaml
+      view_layout:
+        grid-area: dimmer
+      entity: "{{entity}}"
+      vertical: true
+      colorMode: brightness
+      disableScroll: true
+      styles: !include styles/slider_styles.yaml
+
+    # Label
+    #############################################
+    - type: custom:button-card
+      view_layout:
+        grid-area: label
+      entity: "{{entity}}"
+      show_state: false
+      show_icon: false
+      show_name: false
+      show_label: true
+      label: >
+        [[[
+          var bri = Math.floor(states['{{entity}}'].attributes.brightness / 2.55);
+          return  (bri ? bri + '%' : '{{ _global.tablet.settings.translations.OFF }}' );
+        ]]]
+      tap_action:
+        action: toggle
+      styles: !include styles/label_styles.yaml
+      state: !include styles/label_state.yaml
+
+    # Procentage
+    #############################################
+    - type: custom:button-card
+      view_layout:
+        grid-area: name
+      entity: "{{entity}}"
+      show_state: false
+      show_icon: false
+      show_label: false
+      tap_action:
+        action: toggle
+      styles: !include styles/name_styles.yaml
+      card_mod: !include styles/name_card_mod.yaml
+      state: !include styles/name_state.yaml

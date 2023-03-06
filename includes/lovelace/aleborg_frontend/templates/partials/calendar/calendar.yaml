@@ -1,0 +1,15 @@
+type: calendar
+initial_view: dayGridDay
+entities:
+  - this.entity_id
+card_mod:
+  style:
+    .: |
+      ha-card {
+        background: var(--calendar-background);
+      }
+    ha-full-calendar:
+      $: |
+        th.fc-col-header-cell.fc-day {
+          background: var(--ha-card-background) !important;
+        }

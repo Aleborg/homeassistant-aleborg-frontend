@@ -1,0 +1,30 @@
+# lovelace_gen
+
+# Main page card
+#############################################
+type: custom:layout-card
+layout_type: grid
+layout: !include styles/page_layout.yaml
+cards:
+  # Includes the Header Page
+  #############################################
+  - !include
+    - page_header/header.yaml
+    - title: {{title}}
+      areaId: {{areaId}}
+      image: {{image}}
+      
+
+  # Include all Scenes in the room
+  #############################################
+  - !include
+    - scenes/scenes_card.yaml
+    - title: {{title}}
+  
+  # Include the tabbed card
+  #############################################
+  # ToDo: Rename files
+  - !include
+    - tabs/tabs_card.yaml
+    - title: {{title}}
+      areaId: {{areaId}}

@@ -1,0 +1,10 @@
+type: custom:mini-media-player
+group: true
+artwork: full-cover
+source: icon
+hide:
+  volume: true
+  mute: true
+  shuffle: false
+  power: true
+  source: true

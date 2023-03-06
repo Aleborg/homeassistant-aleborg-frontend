@@ -1,0 +1,324 @@
+# Home Assistant override
+#####################################################################################
+# nnn-nnn-max480-nnn-nnn = max media screen 480px
+
+# Cards
+ha-card-box-shadow: none
+ha-card-border-width: 0
+ha-card-alt-background: linear-gradient(-60deg, rgba(99, 140, 182, 0.2), rgba(134, 167, 198, 0.2))
+ha-card-alt2-background: linear-gradient(-60deg, rgba(99, 140, 182, 0.6), rgba(134, 167, 198, 0.6))
+ha-card-background: linear-gradient(-60deg, rgb(82, 98, 122), rgb(134, 167, 198))
+ha-card-no-background: none
+ha-card-border: none
+ha-card-header-font-size: 2rem
+ha-card-header-color: rgb(255, 255, 255)
+ha-card-header-font-family: "var(--primary-font-family)"
+ha-card-border-radius: 0px
+
+# Background
+#####################################################################################
+lovelace-background: var(--background-image)
+background-image: 'center / cover no-repeat url("/local/images/backgrounds/4.jpg") fixed' # remove
+
+# Margin
+#####################################################################################
+layout-margin: 10px
+
+# Fonts
+#####################################################################################
+primary-font-family: "'Ubuntu', sans-serif"
+secondary-font-family: "'Exo 2', sans-serif"
+paper-font-common-base_-_font-family: "'Exo 2', sans-serif"
+paper-font-common-code_-_font-family: "'Exo 2', sans-serif"
+paper-font-body1_-_font-family: "'Exo 2', sans-serif"
+paper-font-subhead_-_font-family: "'Exo 2', sans-serif"
+paper-font-headline_-_font-family: "'Ubuntu', sans-serif"
+paper-font-caption_-_font-family: "'Exo 2', sans-serif"
+paper-font-title_-_font-family: "'Ubuntu', sans-serif"
+paper-item-icon-active-color: var(--state-on-color)
+paper-item-icon-color: var(--state-off-color)
+button-card-light-color: rgb(37, 44, 56)
+paper-font-body1_-_font-family:
+  
+# Text colors
+#####################################################################################
+primary-text-color: rgb(255, 255, 255) # Primary text colour, here is referencing dark-primary-color
+text-primary-color: "var(--primary-text-color)" # Primary text colour
+secondary-text-color: rgb(255, 152, 0) #"#0ae14e" #this is secondary text on the weather card for eg.  was '#5294E2'
+#disabled-text-color: "#7F848E"
+
+# Dimmer
+#####################################################################################
+# Label
+dimmer-label-card-background: none
+dimmer-label-font-size: 1.1em
+dimmer-label-align-self: center
+dimmer-label-justify-self: center
+dimmer-label-font-weight: bold
+
+# Name
+dimmer-name-max480-font-size: 0.55em
+dimmer-name-card-background: none
+dimmer-name-card-margin: 12px 0px 0px 0px
+dimmer-name-card-padding: 0px
+dimmer-name-name-font-size: 0.7em
+dimmer-name-name-align-self: center
+dimmer-name-name-justify-self: center
+
+# Slider
+dimmer-slider-card-background: none
+dimmer-slider-card-width: auto
+dimmer-slider-card-margin: 0
+dimmer-slider-container-max-height: 200px
+dimmer-slider-container-min-height: 160px
+dimmer-slider-container-width: auto
+dimmer-slider-container-margin: 0px
+dimmer-slider-thumb-height: 5px
+dimmer-slider-thumb-background: rgba(200,120,5)
+dimmer-slider-track-background: rgba(15, 17, 19, 0.4)
+dimmer-slider-track-radius: 6px
+dimmer-slider-progress-background: "var(--progress-background)"
+dimmer-slider-card-mod-max480-max-height: 160px
+dimmer-slider-card-mod-max480-min-height: 120px
+dimmer-slider-card-mod-max480-margin: 0px 8px
+dimmer-slider-card-mod-margin: 0px 16px
+
+# Switch
+#####################################################################################
+switch-card-mod-max480-font-size: 0.6em
+switch-card-mod-max480-max-width: 90px
+
+# State
+switch-state-on-card-background: "var(--progress-background)"
+switch-state-on-name-color: "var(--primary-text-color)"
+switch-state-on-icon-color: "var(--primary-text-color)"
+switch-state-off-name-color: "var(--button-card-light-color)"
+
+# Style
+switch-card-max-width: 120px
+switch-card-max-height: 65px
+switch-name-font-size: 0.8em
+switch-name-align-self: center
+switch-name-justify-self: center
+switch-icon-size: 80%
+
+# State colors
+#####################################################################################
+state-icon-color: rgb(68, 115, 158)
+state-off-color: rgb(61, 73, 92)
+state-on-color: rgba(255, 152, 0)
+
+# Page header
+#####################################################################################
+# Picture
+header-picture-margin: 0px
+header-picture-max-height: 184px
+header-picture-max-width: 300px
+header-picture-container-display: none
+
+# Stats
+header-stats-card-mod-overflow: hidden
+header-stats-card-mod-margin: 0px !important
+header-stats-card-mod-padding-top: 12px
+header-stats-grid-min-width: 90px
+header-stats-grid-height: 50px
+header-stats-name-font-size: 0.7em
+header-stats-name-align-self: start
+header-stats-name-font-family: var(--secondary-font-family)
+header-stats-state-font-family: var(--secondary-font-family)
+header-stats-state-align-self: center
+header-stats-state-justify-self: center
+header-stats-state-font-size: 1.1em
+header-stats-state-color: rgba(255,152,0)
+header-stats-card-background: none
+header-stats-card-max-height: 50px
+header-stats-card-min-width: 90px
+header-stats-card-max-width: 120px
+header-stats-card-margin: auto
+header-stats-icon-align-self: center
+header-stats-icon-justify-self: center
+header-stats-icon-state-on-color: rgba(255,152,0)
+header-stats-icon-state-off-color: rgba(197, 0, 0, 0.8)
+
+# Title
+header-title-justify-content: center
+header-title-align-items: center
+header-title-font-size: calc(2vw + 2vh + 1vmin)
+header-title-margin: "var(--page-margin-heading)"
+header-title-font-weight: 300
+header-title-font-family: "var(--paper-font-title_-_font-family)"
+header-title-text-align: "var(--page-heading-text-align)"
+header-title-white-space: nowrap
+header-title-padding: 0
+
+# Scenes
+#####################################################################################
+scenes-button-height: 28px
+scenes-button-padding: 0 0.5em
+scenes-card-margin-top: 8px
+scenes-card-margin-bottom: 0px
+
+# Power usage
+#####################################################################################
+power-usage-card-max-width: 300px
+power-usage-card-max-height: 100px
+power-usage-name-font-size: 1em
+power-usage-icon-size: 80%
+
+# Tabs
+#####################################################################################
+tabs-lights-icon-active: rgba(255,180,0)
+tabs-lights-icon-inactive: rgba(255,180,0,0.6)
+tabs-lights-horizontal-padding: 14px
+tabs-media-icon-active: rgba(255,110,255)
+tabs-media-icon-inactive: rgba(255,110,255,0.6)
+tabs-media-horizontal-padding: 14px
+tabs-calendar-icon-active: rgba(0,230,10)
+tabs-calendar-icon-inactive: rgba(0,230,10,0.6)
+tabs-calendar-horizontal-padding: 14px
+tabs-power-icon-active: rgba(199, 0, 0, 1)
+tabs-power-icon-inactive: rgba(199, 0, 0, 0.6)
+tabs-power-horizontal-padding: 14px
+tabs-card-horizontal-padding: 12px
+tabs-card-mod-margin-top: 25px
+tabs-card-mod-min-width: 60px
+
+# Sidebar
+#####################################################################################
+sidebar-min-width: 140px
+sidebar-max-width: 300px
+sidebar-relative-width: "17%"
+sidebar-text-color: rgb(255, 255, 255)
+sidebar-selected-text-color: rgb(255, 255, 255)
+sidebar-selected-icon-color: rgb(97, 175, 255)
+sidebar-icon-color: rgb(255, 255, 255)
+sidebar-menu-item-card-border-radius: 0px
+sidebar-menu-item-card-margin: 0px
+sidebar-menu-item-card-inactive-background: rgba(45,88,132)
+sidebar-menu-item-card-active-background: rgba(45,88,132,0.5)
+sidebar-menu-item-name-place-self: auto
+sidebar-menu-item-name-text-align: left
+sidebar-menu-item-name-font-size: 1rem
+sidebar-menu-item-icon-active-color: rgba(255,152,0)
+sidebar-menu-item-icon-inactive-color: rgb(255, 255, 255)
+sidebar-background-color: rgba(88, 104, 123, 0.3)
+sidebar-style-margin: 0px
+sidebar-style-border-radius: 0px
+sidebar-style-sticky-cards-background: rgba(0,0,0,0.2)
+sidebar-style-overflow-y: auto
+sidebar-menu-title-font-size: 1rem
+
+# Zigbee map
+#####################################################################################
+zigbee2mqtt-networkmap-node-color: rgba(255, 152, 0, .5)
+zigbee2mqtt-networkmap-node-fill-color: rgba(255, 152, 0, .4)
+zigbee2mqtt-networkmap-node-pinned-color: rgba(255, 110, 255, .6)
+zigbee2mqtt-networkmap-link-color: rgba(0, 230, 10, .1)
+zigbee2mqtt-networkmap-hover-color: "#be385d"
+zigbee2mqtt-networkmap-link-selected-color: rgba(255, 152, 0)
+zigbee2mqtt-networkmap-label-color: rgba(255, 255, 255, .5)
+zigbee2mqtt-networkmap-node-coordinator-color: rgba(197, 0, 0, .8)
+zigbee2mqtt-networkmap-node-router-color: rgba(0,230,10,0.6)
+zigbee2mqtt-networkmap-arrow-color: rgba(18, 120, 98, 0.7)
+
+
+# Media player overrides
+#####################################################################################
+mdc-theme-text-primary-on-background: rgb(0, 0, 0)
+mdc-theme-surface: rgb( 255, 255, 255)
+mdc-ripple-color: rgb(0, 0, 0)
+mmp-text-color: rgb(0, 0, 0)
+mini-media-player-base-color: rgb(255, 255, 255)
+mini-media-player-accent-color: rgb(255, 152, 0)
+mini-media-player-button-color: rgb(255, 152, 0)
+mini-media-player-overlay-color: rgba(0, 0, 0, 0.8)
+mini-media-player-overlay-color-stop: "70%"
+mini-media-player-overlay-base-color: rgb(255, 255, 255)
+mini-media-player-overlay-accent-color: rgb(255, 152, 0)
+mini-media-player-media-cover-info-color: rgb(255, 255, 255)
+
+# Sonos card override
+#####################################################################################
+sonos-background-color: "var(--button-card-light-color)"
+sonos-ha-card-background-color: "var(--ha-card-alt-background)"
+sonos-player-section-background: rgba(33, 33, 33, 0.8)
+sonos-artist-album-text-color: rgb(255, 255, 255)
+sonos-song-text-color: "var(--sonos-artist-album-text-color)"
+sonos-border-width: 0px
+sonos-button-section-background-color: none
+sonos-card-padding: 0.5rem
+sonos-border-radius: 0px
+sonos-media-button-title-text-align: left
+sonos-media-button-title-padding-left: 1rem
+
+# Banner card override
+#####################################################################################
+banner-card-heading-size: 4em
+banner-card-entity-value-size: 1.1em
+banner-card-spacing: 2px
+banner-card-heading-margin: 0.77em
+page-font-size-heading: 4em
+page-margin-heading: 0.77em
+page-heading-text-align: center
+
+# My theme settings
+#####################################################################################
+ha-card-margin: 12px
+grid-row-margin: 5px 5px 0px 0px
+slider-card-track-background: rgba(15, 17, 19, 0.4)
+slider-card-track-radius: 6px
+progress-background: linear-gradient( -60deg, rgb(255, 152, 0), rgb(255, 210, 148))
+state-label-on: rgb(255, 255, 255)
+state-label-off: rgb(134, 167, 198)
+
+# Grid override
+#####################################################################################
+masonry-view-card-margin: 4px
+
+
+power-gradient-start: rgb(0, 230, 10)
+power-gradient-middle: rgb(255, 152, 0)
+power-gradient-end: rgb(199, 0, 0)
+# Calendar
+#####################################################################################
+calendar-background: transparent
+table-header-background-color: var(--ha-card-background)
+
+# App Header
+#####################################################################################
+app-header-background-color: rgba(15, 17, 19, 0.4)
+
+# Titles
+#####################################################################################
+mush-title-padding: 12px 12px 4px
+mush-title-font-size: 2rem
+
+# Layout
+#####################################################################################
+mush-spacing: 8px
+
+# Elements
+#####################################################################################
+mush-icon-border-radius: 4px
+mush-control-border-radius: 4px
+
+# Chips
+#####################################################################################
+mush-chip-border-radius: 4px
+
+modes:
+  light:
+    #Fonts
+    primary-text-color': "#ffffff"
+  dark:
+    # Common
+    #lovelace-background: var(--background-image)
+    #background-image: 'center / cover no-repeat url("/local/images/backgrounds/4.jpg") fixed'
+
+    # Cards
+    #ha-card-box-shadow: 0px 0px 7px 1px rgba(148,199,245,0.3), inset 1px 1px 1px 0px rgba(255,255,255,0.2)
+    #ha-card-border-width: 0
+    #ha-card-background: rgba(16,52,87,0.3)
+    #ha-card-header-color: "#ffffff"
+    #Fonts
+    primary-text-color': "#ffffff"

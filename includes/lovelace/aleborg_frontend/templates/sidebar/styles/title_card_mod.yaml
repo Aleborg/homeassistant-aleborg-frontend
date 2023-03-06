@@ -1,0 +1,7 @@
+style: 
+  mushroom-title-card$: 
+    .: |
+      h1.title {
+        font-size: var(--sidebar-menu-title-font-size);
+        font-family: var(--paper-font-headline_-_font-family);
+      }

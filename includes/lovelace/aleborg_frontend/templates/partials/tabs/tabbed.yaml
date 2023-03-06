@@ -1,0 +1,76 @@
+# lovelace_gen
+
+# Todo: Figure out how to automate what tabs that should be shown, based on the existens of entities
+
+# Tabs grid card
+#############################################
+type: custom:mod-card
+card_mod: !include styles/card_mod.yaml
+card:
+
+  type: custom:tabbed-card
+  attributes:
+    minWidth: true
+    isMinWidthIndicator: true
+  styles: !include styles/styles.yaml
+  tabs:
+    {% if _global.tablet.settings.tabs.showLights %}
+    - card:
+        # Lights
+        #############################################
+        !include
+        - ../lights/lights_card.yaml
+        - title: {{ title }}
+      attributes:
+        icon: {{_global.tablet.settings.tabs.lightsIcon}}
+        minWidth: true
+        isMinWidthIndicator: true
+      styles: !include styles/lights_styles.yaml
+        #############################################
+    {% endif %}
+
+    {% if _global.tablet.settings.tabs.showMedia %}
+    - card:
+        # Multimedia
+        #############################################
+        !include
+        - ../media/media_card.yaml
+        - title: {{title}}
+          areaId: {{areaId}}
+      attributes:
+        icon: {{_global.tablet.settings.tabs.mediaIcon}}
+        minWidth: true
+        isMinWidthIndicator: true
+      styles: !include styles/multimedia_styles.yaml
+        #############################################
+    {% endif %}
+    
+    {% if _global.tablet.settings.tabs.showCalendar %}
+    - card:
+        # Calendar
+        #############################################
+        !include
+        - ../calendar/calendar_card.yaml
+        - title: {{title}}
+      attributes:
+        icon: {{_global.tablet.settings.tabs.calendarIcon}}
+        minWidth: true
+        isMinWidthIndicator: true
+      styles: !include styles/calendar_styles.yaml
+        #############################################
+    {% endif %}
+    
+    {% if _global.tablet.settings.tabs.showPower %}
+    - card:
+        # Power usage
+        #############################################
+        !include
+        - ../power_usage/power_usage_card.yaml
+        - title: {{ title }}
+      attributes:
+        icon: {{_global.tablet.settings.tabs.powerIcon}}
+        minWidth: true
+        isMinWidthIndicator: true
+      styles: !include styles/power_usage_styles.yaml
+        #############################################
+    {% endif %}

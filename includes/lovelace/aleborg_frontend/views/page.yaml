@@ -1,0 +1,20 @@
+# lovelace_gen
+
+theme: {{ _global.tablet.settings.theme}}
+title: {{title}}
+path: {{areaId}}
+icon: {{icon}}
+type: custom:ha-dashboard
+usePanel: true
+style: !include ../templates/sidebar/styles/styles.yaml
+sidebar: 
+  stickyCards:
+    - type: custom:digital-clock
+      locale: sv
+  cards: !include ../templates/sidebar/menu.yaml
+       
+cards:
+  - !include
+    - ../templates/partials/page.yaml
+    - title: {{title}}
+      areaId: {{areaId}}

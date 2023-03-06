@@ -1,0 +1,10 @@
+card:
+  - max-width: var(--switch-card-max-width)
+  - max-height: var(--switch-card-max-height)
+name:
+  - font-size: var(--switch-name-font-size)
+  - align-self: var(--switch-name-align-self)
+  - justify-self: var(--switch-name-justify-self)
+  - font-family: var(--secondary-font-family)
+icon:
+  - --mdc-icon-size: var(--switch-icon-size)

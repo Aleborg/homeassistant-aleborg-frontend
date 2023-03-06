@@ -1,0 +1,7 @@
+# lovelace_gen
+
+# The idea is to have a card without tabs as well if there is only one type of entities in an area
+!include
+- tabbed.yaml
+- title: {{title}}
+  areaId: {{areaId}}  

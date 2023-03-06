@@ -1,0 +1,11 @@
+style:
+  tabbed-card$:
+    .: |
+      section {
+        margin-top: var(--tabs-card-mod-margin-top);
+      }
+    "mwc-tab-bar mwc-tab":
+      $: |
+        .mdc-tab--min-width {
+          min-width: var(--tabs-card-mod-min-width) !important;
+        }

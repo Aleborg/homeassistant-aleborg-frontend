@@ -1,0 +1,23 @@
+# Media player card
+#############################################
+
+type: custom:state-switch
+entity: "this.entity_id"
+states:
+  "on":
+    # Template card to get the source
+    #############################################
+    type: "custom:config-template-card"
+    variables: !include media_player_card_variables.yaml
+    entities:
+      - "this.entity_id"
+    card:
+      type: custom:auto-entities
+      card:
+        type: custom:vertical-stack-in-card
+        card_mod: !include styles/card_mod.yaml
+      card_param: cards
+      #show_empty: false
+      filter:
+        include: !include auto-entities/include.yaml
+        exclude: !include auto-entities/exclude.yaml
