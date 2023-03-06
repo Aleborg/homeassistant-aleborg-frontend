@@ -15,8 +15,8 @@ cards:
   - type: custom:auto-entities
     card:
       type: custom:layout-card
-      layout_type: horizontal
-    #show_empty: false
+      layout_type: grid
+      layout: !include styles/layout.yaml
     card_param: cards
     filter:
       include: !include
@@ -33,8 +33,8 @@ cards:
   - type: custom:auto-entities
     card:
       type: custom:layout-card
-      layout_type: horizontal
-    #show_empty: false
+      layout_type: grid
+      layout: !include styles/layout.yaml
     card_param: cards
     filter:
       include: !include
@@ -51,8 +51,8 @@ cards:
   - type: custom:auto-entities
     card:
       type: custom:layout-card
-      layout_type: horizontal
-    #show_empty: false
+      layout_type: grid
+      layout: !include styles/layout.yaml
     card_param: cards
     filter:
       include: !include
@@ -69,9 +69,9 @@ cards:
   - type: custom:auto-entities
     card:
       type: custom:layout-card
-      layout_type: horizontal
+      layout_type: grid
+      layout: !include styles/layout.yaml
       hours_to_show: 24 * 30
-    #show_empty: false
     card_param: cards
     filter:
       include: !include
@@ -88,8 +88,8 @@ cards:
   - type: custom:auto-entities
     card:
       type: custom:layout-card
-      layout_type: horizontal
-    #show_empty: false
+      layout_type: grid
+      layout: !include styles/layout.yaml
     card_param: cards
     filter:
       include: !include
