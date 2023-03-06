@@ -28,17 +28,16 @@ layout-margin: 10px
 #####################################################################################
 primary-font-family: "'Ubuntu', sans-serif"
 secondary-font-family: "'Exo 2', sans-serif"
-paper-font-common-base_-_font-family: "'Exo 2', sans-serif"
-paper-font-common-code_-_font-family: "'Exo 2', sans-serif"
-paper-font-body1_-_font-family: "'Exo 2', sans-serif"
-paper-font-subhead_-_font-family: "'Exo 2', sans-serif"
-paper-font-headline_-_font-family: "'Ubuntu', sans-serif"
-paper-font-caption_-_font-family: "'Exo 2', sans-serif"
-paper-font-title_-_font-family: "'Ubuntu', sans-serif"
+paper-font-common-base_-_font-family: "var(--secondary-font-family)"
+paper-font-common-code_-_font-family: "var(--secondary-font-family)"
+paper-font-body1_-_font-family: "var(--secondary-font-family)"
+paper-font-subhead_-_font-family: "var(--secondary-font-family)"
+paper-font-headline_-_font-family: "var(--primary-font-family)"
+paper-font-caption_-_font-family: "var(--secondary-font-family)"
+paper-font-title_-_font-family: "var(--primary-font-family)"
 paper-item-icon-active-color: var(--state-on-color)
 paper-item-icon-color: var(--state-off-color)
 button-card-light-color: rgb(37, 44, 56)
-paper-font-body1_-_font-family:
   
 # Text colors
 #####################################################################################
