@@ -2,7 +2,10 @@
 
 ## Settings
 This is where the global settings such as global variables, translations, excluded entities etc. are configured
-To all parts new items can be added
+To all parts new items can be added.
+
+:warning: After making changes in settings.yaml you'll need to restart HomeAssistant
+
 ### Theme and path
 
 | Name            | Type      | Optional/Required | Description            |

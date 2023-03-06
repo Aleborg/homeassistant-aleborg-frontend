@@ -10,9 +10,9 @@ cards:
         entityId: this.entity_id
         mediaBrowserItemsAsList: true
         skipAdditionalPlayerSwitches: true
-      - type: custom:sonos-grouping
-        entityId: this.entity_id
-        styles: !include styles/styles.yaml
+#      - type: custom:sonos-grouping
+#        entityId: this.entity_id
+#        styles: !include styles/styles.yaml
   - type: custom:layout-card
     layout_type: vertical
     cards:
