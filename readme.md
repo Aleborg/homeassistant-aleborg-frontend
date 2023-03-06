@@ -58,6 +58,7 @@ There's still a lot to do in this frontend and my CSS skills sucks, so all help 
 
 ### Integrations (HACS)
 * **[lovelace_gen](https://github.com/thomasloven/hass-lovelace_gen)** by [@thomasloven](https://github.com/thomasloven/)
+* **[fontawesome](https://github.com/thomasloven/hass-fontawesome)** by [@thomasloven](https://github.com/thomasloven/)
 * **[Nord Pool integration for Home Assistant](https://github.com/custom-components/nordpool)** by [@custom-components](https://github.com/custom-components)
 * **[Variable](https://github.com/snarky-snark/home-assistant-variables)** by [@snarky-snark](https://github.com/snarky-snark)
 
