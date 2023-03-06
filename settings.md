@@ -42,6 +42,36 @@ settings:
       showIlluminanceSensors: true
 ```
 
+### Tabs
+Here you can choose what tabs that should be visible and what icons the tabs should have.
+
+| Name            | Type      | Optional/Required | Description            |
+|:----------------|:---------:|:-----------------:|:-----------------------|
+| `showLights`    | boolean   | Required          | Show or hide the lights tab  |
+| `lightsIcon`    | string    | Required          | What icon to use for the lights tab  |
+| `showMedia`     | boolean   | Required          | Show or hide the media tab  |
+| `mediaIcon`     | string    | Required          | What icon to use for the media tab  |
+| `showCalendar`  | boolean   | Required          | Show or hide the calendar tab  |
+| `calendarIcon`  | string    | Required          | What icon to use for the calendar tab  |
+| `showPower`     | boolean   | Required          | Show or hide the power usage tab  |
+| `powerIcon`     | string    | Required          | What icon to use for the power usage tab  |
+
+#### Example
+
+```yaml
+settings: 
+  ...
+  tabs:
+    showLights: true
+    lightsIcon: mdi:lightbulb-on-10
+    showMedia: true
+    mediaIcon: mdi:music
+    showCalendar: true
+    calendarIcon: mdi:calendar
+    showPower: true
+    powerIcon: fapro:usage
+```
+
 ### Exclude entities
 Here you can exclude entities, states and hidden entities that you don't want to be shown in the rooms/pages.\
 You can do this for lights, media, scenes, the page header and for the power usage.\
