@@ -4,7 +4,7 @@
 This is where the global settings such as global variables, translations, excluded entities etc. are configured
 To all parts new items can be added.
 
-:warning: After making changes in settings.yaml you'll need to restart HomeAssistant
+:warning: <sub>After making changes in settings.yaml you'll need to restart HomeAssistant</sub>
 
 ### Theme and path
 
@@ -141,8 +141,8 @@ settings:
 You can easily add translations if you need it somewhere. The page need to start with `# lovelace_gen`.
 The translations can be referenced with this code: `{{_global.tablet.settings.translations.power.powerConsumptionNow}}`
 
-:warning: Removing any of the `powerConsumption` will also remove those gauges from the pages.\
-In other words, if we remove i.e. `powerConsumptionYear` from translations, will cause all gauges with power consumption for the past year to be removed from all pages. 
+:warning: <sub>Removing any of the `powerConsumption` will also remove those gauges from the pages.\
+In other words, if we remove i.e. `powerConsumptionYear` from translations, will cause all gauges with power consumption for the past year to be removed from all pages. </sub>
 
 #### Example
 

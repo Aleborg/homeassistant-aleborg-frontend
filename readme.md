@@ -1,14 +1,18 @@
+<picture>
+  <img alt="Room with lights." src="includes/lovelace/screenshots/lights.png">
+</picture>
+
 # Aleborg Frontend
 
-This is a complete frontend for [HomeAssistant](https://home-assistant.io)
+This is a complete frontend for [HomeAssistant](https://home-assistant.io)\
+It automatically shows lights, multimedia, calendars and power usage for all areas(rooms), you only have to configure what areas to show in one file, settings.yaml.
 
 I've tried to make this frontend as automated as possible. Due to restrictions in the frontend, a lot of things needs to be configured in the file [/includes/lovelace/aleborg_frontend/settings.yaml](settings.md).
 
 This frontend doesn't have support for all types of devices and entities due to the fact that I don't have all different devices, such as covers. [A list of my hardware can be found here](hardware.md).
 
-There's still a lot to do in this frontend and my CSS skills sucks, so all help is welcome! 
+There's still a lot to do in this frontend and my CSS skills sucks, so all contribution is welcome! 
 
-:warning: All files and folders needs to be placed in the folder `config`
 
 <a href="https://www.buymeacoffee.com/aleborg"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=aleborg&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
@@ -17,6 +21,7 @@ There's still a lot to do in this frontend and my CSS skills sucks, so all help 
   - [Requirements](#requirements)
     - [Frontend (HACS)](#frontend-hacs)
     - [Integrations (HACS)](#integrations-hacs)
+  - [Installation](#installation)
   - [configuration.yaml](#configurationyaml)
     - [Lovelace configuration](#lovelace-configuration)
     - [Theme configuration](#theme-configuration)
@@ -62,9 +67,17 @@ There's still a lot to do in this frontend and my CSS skills sucks, so all help 
 * **[Nord Pool integration for Home Assistant](https://github.com/custom-components/nordpool)** by [@custom-components](https://github.com/custom-components)
 * **[Variable](https://github.com/snarky-snark/home-assistant-variables)** by [@snarky-snark](https://github.com/snarky-snark)
 
+## Installation
 
+1. Make sure all the Frontend plugins and Integrations are installed in HACS.
+2. Edit HomeAssistants [configuration.yaml](#configurationyaml) file. 
+3. Copy all folders and files into your config folder in HomeAssistant
+4. Configure [includes/lovelace/aleborg_frontend/settings.yaml](settings.md) for your own needs.
+5. Restart HomeAssistant
+6. Report any bugs...
 
 ## configuration.yaml
+These are changes that you need to make after you've installed all plugins.
 
 ### Lovelace configuration
 Add to your `configuration.yaml` these lines:
