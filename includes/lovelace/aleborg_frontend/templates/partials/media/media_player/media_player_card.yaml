@@ -17,7 +17,6 @@ states:
         type: custom:vertical-stack-in-card
         card_mod: !include styles/card_mod.yaml
       card_param: cards
-      #show_empty: false
       filter:
         include: !include auto-entities/include.yaml
         exclude: !include auto-entities/exclude.yaml
