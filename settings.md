@@ -249,4 +249,4 @@ rooms:
 ```
 
 ## Full example
-[Can be found here.](settings.yaml)
+[Can be found here.](includes/lovelace/aleborg_frontend/settings.yaml))
