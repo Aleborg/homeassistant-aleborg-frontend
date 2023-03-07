@@ -43,29 +43,53 @@ There's still a lot to do in this frontend and my CSS skills sucks, so all contr
 ## Requirements
 
 ### Frontend (HACS)
-* **[layout-card](https://github.com/thomasloven/lovelace-layout-card)** by [@thomasloven](https://github.com/thomasloven/)
-* **[auto-entities](https://github.com/thomasloven/lovelace-auto-entities)** by [@thomasloven](https://github.com/thomasloven/)
-* **[card-mod 3](https://github.com/thomasloven/lovelace-card-mod)** by [@thomasloven](https://github.com/thomasloven/)
-* **[state-switch](https://github.com/thomasloven/lovelace-state-switch)** by [@thomasloven](https://github.com/thomasloven/)
-* **[Button Card](https://github.com/custom-cards/button-card)** by [@RomRider](https://github.com/RomRider)
-* **[ApexCharts Card](https://github.com/RomRider/apexcharts-card)** by [@RomRider](https://github.com/RomRider)
-* **[Config Template Card Card](https://github.com/iantrich/config-template-card)** by [@iantrich](https://github.com/iantrich)
-* **[Digital Clock](https://github.com/wassy92x/lovelace-digital-clock)** by [@wassy92x](https://github.com/wassy92x)
-* **[HA Dashboard](https://github.com/wassy92x/lovelace-ha-dashboard)** by [@wassy92x](https://github.com/wassy92x)
-* **[Vertical Stack In Card](https://github.com/ofekashery/vertical-stack-in-card)** by [@ofekashery](https://github.com/ofekashery)
-* **[Mini Media Player](https://github.com/kalkih/mini-media-player)** by [@kalkih](https://github.com/kalkih)
-* **[Sonos card for Home Assistant's Dashboard UI](https://github.com/johanfrick/custom-sonos-card)** by [@johanfrick](https://github.com/johanfrick)
-* **[Mushroom](https://github.com/piitaya/lovelace-mushroom)** by [@piitaya](https://github.com/piitaya)
-* **[Mushroom Themes](https://github.com/piitaya/lovelace-mushroom-themes)** by [@piitaya](https://github.com/piitaya)
-* **[Kiosk Mode](https://github.com/NemesisRE/kiosk-mode)** by [@NemesisRE](https://github.com/NemesisRE)
-* **[Home Assistant Swipe Navigation](https://github.com/zanna-37/hass-swipe-navigation)** by [@zanna-37](https://github.com/zanna-37)
-* **[Tabbed Card](https://github.com/kinghat/tabbed-card)** by [@kinghat](https://github.com/kinghat)
+<sub>If you choose to remove a component, you'll also have to remove the code that uses that component throughout the code.</sub>
+<sub>Sadly I had to use a lot of different components to automate this dashboard, hopefully I'll be able to minimize the amount in the future.</sub>
+
+* **[layout-card](https://github.com/thomasloven/lovelace-layout-card)** by [@thomasloven](https://github.com/thomasloven/)\
+  <sub>Used throughout the code for the design</sub>
+* **[auto-entities](https://github.com/thomasloven/lovelace-auto-entities)** by [@thomasloven](https://github.com/thomasloven/)\
+  <sub>Used throughout the code to automatically find entities in the different areas</sub>
+* **[card-mod 3](https://github.com/thomasloven/lovelace-card-mod)** by [@thomasloven](https://github.com/thomasloven/)\
+  <sub>Used throughout the code to style the cards using CSS, all CSS values can be changed in [aleborg-material.yaml](includes/lovelace/aleborg_frontend/common/aleborg-material.yaml)</sub>
+* **[state-switch](https://github.com/thomasloven/lovelace-state-switch)** by [@thomasloven](https://github.com/thomasloven/)\
+  <sub>Used in the [media_player_card.yaml](includes/lovelace/aleborg_frontend/templates/partials/media/media_player/media_player_card.yaml) to display the correct media player choosen in source of an receiver</sub>
+* **[Button Card](https://github.com/custom-cards/button-card)** by [@RomRider](https://github.com/RomRider)\
+  <sub>Used throughout the code for statistics and lights</sub>
+* **[ApexCharts Card](https://github.com/RomRider/apexcharts-card)** by [@RomRider](https://github.com/RomRider)\
+  <sub>Used in [home.yaml](includes/lovelace/aleborg_frontend/views/home.yaml) to display the graph for electrical prices. **Can be removed**</sub>
+* **[Config Template Card Card](https://github.com/iantrich/config-template-card)** by [@iantrich](https://github.com/iantrich)\
+  <sub>Used in the [media_player_card.yaml](includes/lovelace/aleborg_frontend/templates/partials/media/media_player/media_player_card.yaml) to display the correct media player choosen in source of an receiver (in combination with the component state-switch)</sub>
+* **[Digital Clock](https://github.com/wassy92x/lovelace-digital-clock)** by [@wassy92x](https://github.com/wassy92x)\
+  <sub>Displays the clock in the sidebar. **Can be removed**</sub>
+* **[HA Dashboard](https://github.com/wassy92x/lovelace-ha-dashboard)** by [@wassy92x](https://github.com/wassy92x)\
+  <sub>This component makes it possible to use the sidebar with the menu</sub>
+* **[Vertical Stack In Card](https://github.com/ofekashery/vertical-stack-in-card)** by [@ofekashery](https://github.com/ofekashery)\
+  <sub>Used throughout the code for the design</sub>
+* **[Mini Media Player](https://github.com/kalkih/mini-media-player)** by [@kalkih](https://github.com/kalkih)\
+  <sub>Used for all Media Players. **Can be removed if you remove all media player code**</sub>
+* **[Sonos card for Home Assistant's Dashboard UI](https://github.com/johanfrick/custom-sonos-card)** by [@johanfrick](https://github.com/johanfrick)\
+  <sub>Shows the control for Sonos integration **Can be removed and replaced with a regular media player**</sub>
+* **[Mushroom](https://github.com/piitaya/lovelace-mushroom)** by [@piitaya](https://github.com/piitaya)\
+  <sub>Used throughout the code for the design</sub>
+* **[Mushroom Themes](https://github.com/piitaya/lovelace-mushroom-themes)** by [@piitaya](https://github.com/piitaya)\
+  <sub>Used throughout the code for the design</sub>
+* **[Kiosk Mode](https://github.com/NemesisRE/kiosk-mode)** by [@NemesisRE](https://github.com/NemesisRE)\
+  <sub>Displays the dashboard without menu. **Can be removed**</sub>
+* **[Home Assistant Swipe Navigation](https://github.com/zanna-37/hass-swipe-navigation)** by [@zanna-37](https://github.com/zanna-37)\
+  <sub>Makes it possible to swipe between the pages. **Can be removed**</sub>
+* **[Tabbed Card](https://github.com/kinghat/tabbed-card)** by [@kinghat](https://github.com/kinghat)\
+  <sub>Makes it possible to have the tabs(icons) that allows us to display lights, media etc in each room/area </sub>
 
 ### Integrations (HACS)
-* **[lovelace_gen](https://github.com/thomasloven/hass-lovelace_gen)** by [@thomasloven](https://github.com/thomasloven/)
-* **[fontawesome](https://github.com/thomasloven/hass-fontawesome)** by [@thomasloven](https://github.com/thomasloven/)
-* **[Nord Pool integration for Home Assistant](https://github.com/custom-components/nordpool)** by [@custom-components](https://github.com/custom-components)
-* **[Variable](https://github.com/snarky-snark/home-assistant-variables)** by [@snarky-snark](https://github.com/snarky-snark)
+* **[lovelace_gen](https://github.com/thomasloven/hass-lovelace_gen)** by [@thomasloven](https://github.com/thomasloven/)\
+  <sub>This is what makes the magic happen, along side with auto-entities and Variable</sub>
+* **[fontawesome](https://github.com/thomasloven/hass-fontawesome)** by [@thomasloven](https://github.com/thomasloven/)\
+  <sub>Is used for all custom icons that is used. **Can be removed if you replace all icons in [settings.yaml](includes/lovelace/aleborg_frontend/settings.yaml)**</sub>
+* **[Nord Pool integration for Home Assistant](https://github.com/custom-components/nordpool)** by [@custom-components](https://github.com/custom-components)\
+  <sub>Fetches electric prices in [home.yaml](includes/lovelace/aleborg_frontend/views/home.yaml). **Can be removed**</sub>
+* **[Variable](https://github.com/snarky-snark/home-assistant-variables)** by [@snarky-snark](https://github.com/snarky-snark)\
+  <sub>This is the plugin that allow us to gather all the settings in one file, [settings.yaml](includes/lovelace/aleborg_frontend/settings.yaml)</sub>
 
 ## Installation
 
