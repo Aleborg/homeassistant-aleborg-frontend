@@ -18,7 +18,7 @@ ha-card-border-radius: 0px
 # Background
 #####################################################################################
 lovelace-background: var(--background-image)
-background-image: 'center / cover no-repeat url("/local/images/backgrounds/4.jpg") fixed' # remove
+background-image: 'center / cover no-repeat url("/local/images/backgrounds/4.jpg") fixed' 
 
 # Margin
 #####################################################################################
@@ -44,7 +44,6 @@ button-card-light-color: rgb(37, 44, 56)
 primary-text-color: rgb(255, 255, 255) # Primary text colour, here is referencing dark-primary-color
 text-primary-color: "var(--primary-text-color)" # Primary text colour
 secondary-text-color: rgb(255, 152, 0) #"#0ae14e" #this is secondary text on the weather card for eg.  was '#5294E2'
-#disabled-text-color: "#7F848E"
 
 # Dimmer
 #####################################################################################
@@ -250,15 +249,6 @@ sonos-border-radius: 0px
 sonos-media-button-title-text-align: left
 sonos-media-button-title-padding-left: 1rem
 
-# Banner card override
-#####################################################################################
-banner-card-heading-size: 4em
-banner-card-entity-value-size: 1.1em
-banner-card-spacing: 2px
-banner-card-heading-margin: 0.77em
-page-font-size-heading: 4em
-page-margin-heading: 0.77em
-page-heading-text-align: center
 
 # My theme settings
 #####################################################################################
@@ -275,49 +265,7 @@ state-label-off: rgb(134, 167, 198)
 masonry-view-card-margin: 4px
 
 
-power-gradient-start: rgb(0, 230, 10)
-power-gradient-middle: rgb(255, 152, 0)
-power-gradient-end: rgb(199, 0, 0)
 # Calendar
 #####################################################################################
 calendar-background: transparent
 table-header-background-color: var(--ha-card-background)
-
-# App Header
-#####################################################################################
-app-header-background-color: rgba(15, 17, 19, 0.4)
-
-# Titles
-#####################################################################################
-mush-title-padding: 12px 12px 4px
-mush-title-font-size: 2rem
-
-# Layout
-#####################################################################################
-mush-spacing: 8px
-
-# Elements
-#####################################################################################
-mush-icon-border-radius: 4px
-mush-control-border-radius: 4px
-
-# Chips
-#####################################################################################
-mush-chip-border-radius: 4px
-
-modes:
-  light:
-    #Fonts
-    primary-text-color': "#ffffff"
-  dark:
-    # Common
-    #lovelace-background: var(--background-image)
-    #background-image: 'center / cover no-repeat url("/local/images/backgrounds/4.jpg") fixed'
-
-    # Cards
-    #ha-card-box-shadow: 0px 0px 7px 1px rgba(148,199,245,0.3), inset 1px 1px 1px 0px rgba(255,255,255,0.2)
-    #ha-card-border-width: 0
-    #ha-card-background: rgba(16,52,87,0.3)
-    #ha-card-header-color: "#ffffff"
-    #Fonts
-    primary-text-color': "#ffffff"
