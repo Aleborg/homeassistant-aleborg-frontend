@@ -13,6 +13,7 @@ This frontend doesn't have support for all types of devices and entities due to 
 
 There's still a lot to do in this frontend and my CSS skills sucks, so all contribution is welcome! 
 
+Did you install it? I would love to get some feedback! 
 
 <a href="https://www.buymeacoffee.com/aleborg"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=aleborg&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
