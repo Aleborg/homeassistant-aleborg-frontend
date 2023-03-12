@@ -63,7 +63,6 @@ $RECYCLE.BIN/
 /.cloud
 /.storage
 /node-red
-/themes
 /netdaemon
 /deps
 **/__pycache__
