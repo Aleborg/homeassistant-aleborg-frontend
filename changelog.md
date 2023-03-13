@@ -1,5 +1,12 @@
-# Changelog
+# What's Changed
 
-## [0.0.1] - 2023-03-13
+## What's Changed
 
-- Initial release
+### Fixes
+- Added missing `apexCardTomorrow` in translations to settings.yaml
+
+### New features
+- Added `startPage`-section in settings.yaml for a generic first page (home) and removed the room `home`
+- 
+
+
