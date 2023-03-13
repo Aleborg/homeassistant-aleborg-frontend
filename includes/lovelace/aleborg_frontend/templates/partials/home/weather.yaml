@@ -1,0 +1,13 @@
+# lovelace_gen
+
+{% for weather in (entities|sort(attribute='sortOrder')) %}
+- type: weather-forecast
+  entity: {{weather.entity_id}}
+  {% if weather.show_current %}
+  show_current: {{weather.show_current}}
+  {% endif %}
+  {% if weather.show_forecast %}
+  show_forecast: {{weather.show_forecast}}
+  {% endif %}
+  card_mod: !include ../styles/ha-card-alt-background.yaml
+{% endfor %}

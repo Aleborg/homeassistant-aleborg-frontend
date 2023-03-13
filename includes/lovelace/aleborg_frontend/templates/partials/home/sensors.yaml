@@ -1,0 +1,22 @@
+# lovelace_gen
+
+{% for sensor in (entities|sort(attribute='sortOrder')) %}
+- type: sensor
+  entity: {{sensor.entity_id}}
+  {% if sensor.name %}
+  name: {{sensor.name}}
+  {% endif %}
+  {% if sensor.graph %}
+  graph: {{sensor.graph}}
+  {% endif %}
+  {% if sensor.hours_to_show %}
+  hours_to_show: {{sensor.hours_to_show}}
+  {% endif %}
+  {% if sensor.unit %}
+  unit: {{sensor.unit}}
+  {% endif %}
+  {% if sensor.detail %}
+  detail: {{sensor.detail}}
+  {% endif %}
+  card_mod: !include ../styles/ha-card-alt-background.yaml
+{% endfor %}

@@ -1,0 +1,32 @@
+# lovelace_gen
+
+{% for camera in (entities|sort(attribute='sortOrder')) %}
+- type: picture-entity
+  entity: {{camera.entity_id}}
+  {% if camera.name %}
+  name: {{camera.name}}
+  {% endif %}
+  {% if camera.camera_image %}
+  camera_image: {{camera.camera_image}}
+  {% endif %}
+  {% if camera.camera_view %}
+  camera_view: {{camera.camera_view}}
+  {% endif %}
+  {% if camera.show_state %}
+  show_state: {{camera.show_state}}
+  {% endif %}
+  {% if camera.show_name %}
+  show_name: {{camera.show_name}}
+  {% endif %}
+  {% if camera.state_image %}
+  state_image: {{camera.state_image}}
+  {% endif %}
+  {% if camera.state_filter %}
+  state_filter: {{camera.state_filter}}
+  {% endif %}
+  card_mod: !include ../styles/ha-card-alt-background.yaml
+  tap_action:
+    action: none
+  hold_action:
+    action: none
+{% endfor %}

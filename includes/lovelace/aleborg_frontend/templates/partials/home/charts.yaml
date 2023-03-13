@@ -1,0 +1,135 @@
+# lovelace_gen
+
+{% for chart in (entities|sort(attribute='sortOrder')) %}
+- type: custom:apexcharts-card
+  card_mod: !include ../styles/ha-card-alt-background.yaml
+  style:
+    .: >
+      .apexcharts-tooltip, .apexcharts-xaxistooltip,
+      .apexcharts-yaxistooltip {
+        color: #000000 !important;
+      }
+  graph_span: {{chart.graph_span}}
+  span:
+    start: day
+    offset: +0H
+  header:
+    show: true
+    title: {{_global.tablet.settings.translations.home.apexCardElectricityPrices}}
+    show_states: false
+    colorize_states: true
+  hours_12: {{chart.hours_12}}
+  stacked: false
+  experimental:
+    color_threshold: true
+  all_series_config:
+    show:
+      legend_value: true
+      datalabels: false
+      extremas: true
+      in_brush: true
+    float_precision: 2
+    type: area
+    invert: false
+    fill_raw: last
+    color_threshold:
+      - value: -1
+        color: 1E90FF
+      - value: 35
+        color: "008000"
+      - value: 100
+        color: DAA520
+      - value: 200
+        color: FF0000
+      - value: 300
+        color: cc0000
+      - value: 400
+        color: "990000"
+      - value: 500
+        color: 4d0000
+  now:
+    show: true
+    label: {{_global.tablet.settings.translations.home.apexCardRightNow}} 
+    color: "#000000" 
+  series:
+    - entity: {{chart.entity_id}}
+      name: {{_global.tablet.settings.translations.home.apexCardToday}} 
+      opacity: 0.7
+      extend_to: false
+      data_generator: |
+        return entity.attributes.raw_today.map((start, index) => {
+            return [new Date(start["start"]).getTime(), (entity.attributes.raw_today[index]["value"]+{{_global.tablet.settings.translations.home.apexCardElectricityTransfer}}+{{_global.tablet.settings.translations.home.apexCardElectricityTax}})];
+          });
+    - entity: {{chart.entity_id}}
+      name: {{_global.tablet.settings.translations.home.apexCardTomorrow}} 
+      opacity: 0.5
+      data_generator: >
+        return entity.attributes.raw_tomorrow.map((start, index)
+        => {
+          return [new Date(start["start"]).getTime(), (entity.attributes.raw_tomorrow[index]["value"]+{{_global.tablet.settings.translations.home.apexCardElectricityTransfer}}+{{_global.tablet.settings.translations.home.apexCardElectricityTax}})];
+        });
+  apex_config:
+    chart:
+      height: 400px
+      animations:
+        enabled: true
+        easing: easeinout
+        speed: 800
+        animateGradually:
+          enabled: true
+          delay: 150
+    zoom:
+      enabled: true
+      type: x
+      autoScaleYaxis: true
+      zoomedArea:
+        fill:
+          color: "#90CAF9"
+          opacity: 0.4
+        stroke:
+          color: "#0D47A1"
+          opacity: 0.4
+          width: 1
+    legend:
+      show: false
+      floating: true
+      offsetY: 25
+    yaxis:
+      opposite: false
+      reversed: false
+      logarithmic: false
+      decimalsInFloat: 2
+      labels:
+        show: true
+      tooltip:
+        enabled: true
+      crosshairs:
+        show: true
+    xaxis:
+      labels:
+        show: true
+        rotate: -45
+        rotateAlways: true
+      logarithmic: true
+    stroke:
+      show: true
+      curve: stepline
+      lineCap: butt
+      colors: undefined
+    plotOptions:
+      candlestick:
+        colors:
+          upward: "#00B746"
+          downward: "#EF403C"
+        wick:
+          useFillColor: true
+    markers:
+      size: 1
+    grid:
+      show: true
+      strokeDashArray: 1
+      position: front
+      xaxis:
+        lines:
+          show: true
+{% endfor %}
