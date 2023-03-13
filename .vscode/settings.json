@@ -8,6 +8,12 @@
     "editor.indentSize": "tabSize",
     "editor.detectIndentation": false,
     "editor.codeActionsOnSave": {
-      
+    },
+    "[markdown]": {
+      "editor.quickSuggestions": {
+        "other": true, // this must be true
+        "comments": false,
+        "strings": false
     }
+  }
 }

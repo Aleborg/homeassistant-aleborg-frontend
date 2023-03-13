@@ -74,3 +74,4 @@ home-assistant.*
 music_assistant.db
 
 /zigbee2mqtt
+releases
