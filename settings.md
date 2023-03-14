@@ -17,18 +17,18 @@
 - [Start page](#start-page)
     - [Example](#example-5)
   - [Parts](#parts)
-    - [Example](#example-6)
+      - [Example](#example-6)
     - [Types](#types)
       - [`sensors`](#sensors)
-    - [Example](#example-7)
+        - [Example](#example-7)
       - [`weather`](#weather)
-    - [Example](#example-8)
+        - [Example](#example-8)
       - [`cameras`](#cameras)
-    - [Example](#example-9)
+        - [Example](#example-9)
       - [`charts`](#charts)
-    - [Example](#example-10)
+        - [Example](#example-10)
       - [`entities`](#entities)
-    - [Example](#example-11)
+        - [Example](#example-11)
 - [Rooms and pages](#rooms-and-pages)
     - [Shortcuts (below the clock in the sidebar)](#shortcuts-below-the-clock-in-the-sidebar)
       - [Example](#example-12)
@@ -273,7 +273,7 @@ Each part has the following options:
 | `hideOnMobile`  | boolean   | Optional          | Specifies if the part should be visible on mobile units (max width 480px)  |
 | `entities`      | array     | Required          | An array of entities to be shown in the part  |
 
-#### Example
+##### Example
 
 ```yaml
   - type: sensors
@@ -303,7 +303,13 @@ Each type can be used more than once, all entities in the part will be grouped t
 ##### `sensors`
 This part uses the [Sensor Card](https://www.home-assistant.io/dashboards/sensor/). All configuration variables from the card can be used.
 
-#### Example
+| Name            | Type      | Optional/Required | Description            |
+|:----------------|:---------:|:-----------------:|:-----------------------|
+| `entity_id`     | string    | Required          | ID of the entity to show  |
+| `sortOrder`     | integer   | Required          | Specifies the order of the card in the part | 
+| `hideOnMobile`  | boolean   | Optional          | Specifies if the card should be visible on mobile units (max width 480px)  |
+
+###### Example
 
 ```yaml
   - entity_id: sensor.nibe_23270_40014
@@ -317,7 +323,13 @@ This part uses the [Sensor Card](https://www.home-assistant.io/dashboards/sensor
 ##### `weather`
 This part uses the [Weather Forecast Card](https://www.home-assistant.io/dashboards/weather-forecast/). All configuration variables from the card can be used.
 
-#### Example
+| Name            | Type      | Optional/Required | Description            |
+|:----------------|:---------:|:-----------------:|:-----------------------|
+| `entity_id`     | string    | Required          | ID of the entity to show  |
+| `sortOrder`     | integer   | Required          | Specifies the order of the card in the part | 
+| `hideOnMobile`  | boolean   | Optional          | Specifies if the card should be visible on mobile units (max width 480px)  |
+
+###### Example
 
 ```yaml
   - entity_id: weather.smhi_home
@@ -328,7 +340,14 @@ This part uses the [Weather Forecast Card](https://www.home-assistant.io/dashboa
 
 ##### `cameras`
 This part uses the [Picture Entity Card](https://www.home-assistant.io/dashboards/picture-entity/). All configuration variables from the card can be used.
-#### Example
+
+| Name            | Type      | Optional/Required | Description            |
+|:----------------|:---------:|:-----------------:|:-----------------------|
+| `entity_id`     | string    | Required          | ID of the entity to show  |
+| `sortOrder`     | integer   | Required          | Specifies the order of the card in the part | 
+| `hideOnMobile`  | boolean   | Optional          | Specifies if the card should be visible on mobile units (max width 480px)  |
+
+###### Example
 
 ```yaml
   - entity_id: camera.security_camera
@@ -341,7 +360,13 @@ This part uses the [Picture Entity Card](https://www.home-assistant.io/dashboard
 ##### `charts`
 This chart shows the power costs chart. It will only be displayed if [`powerConsumptions`](#power-consumption-segments) is specified in the settings.
 
-#### Example
+| Name            | Type      | Optional/Required | Description            |
+|:----------------|:---------:|:-----------------:|:-----------------------|
+| `entity_id`     | string    | Required          | ID of the entity to show  |
+| `sortOrder`     | integer   | Required          | Specifies the order of the card in the part | 
+| `hideOnMobile`  | boolean   | Optional          | Specifies if the card should be visible on mobile units (max width 480px)  |
+
+###### Example
 
 ```yaml
   - entity_id: sensor.nordpool_kwh_se3_sek_3_10_025
@@ -358,10 +383,11 @@ The entities type uses the [Mushroom Cards](https://github.com/piitaya/lovelace-
 |:----------------|:---------:|:-----------------:|:-----------------------|
 | `entity_id`     | string    | Required          | ID of the entity to show  |
 | `sortOrder`     | integer   | Required          | Specifies the order of the card in the part | 
+| `hideOnMobile`  | boolean   | Optional          | Specifies if the card should be visible on mobile units (max width 480px)  |
 | `type`          | string    | Required          | Type of card that should be used. Supported options are [climate](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/climate.md), [light](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/light.md), [fan](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/fan.md), [humidifier](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/humidifier.md), [media-player](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/media-player.md), [vacuum](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/vacuum.md), [cover](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/cover.md) [alarm-control-panel](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/alarm-control-panel.md), [person](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/person.md), [lock](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/lock.md), [entity](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/entity.md) |
 
 
-#### Example
+###### Example
 
 ```yaml
   - entity_id: light.dm011_belysning_takspots_nedre_badrummet
