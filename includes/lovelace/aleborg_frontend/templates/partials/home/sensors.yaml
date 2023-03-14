@@ -2,6 +2,11 @@
 
 {% for sensor in (entities|sort(attribute='sortOrder')) %}
 - type: sensor
+  {% if sensor.hideOnMobile %}
+  view_layout:
+    show:
+      mediaquery: "(min-width: 480px)"
+  {% endif %}        
   entity: {{sensor.entity_id}}
   {% if sensor.name %}
   name: {{sensor.name}}

@@ -19,18 +19,22 @@ cards:
     layout:
       max_width: 1000
       width: 300
-      max_cols: 2
+      max_cols: {{ _global.tablet.startPage.max_columns }}
     cards:
       {% for part in _global.tablet.startPage.parts|sort(attribute='sortOrder') %}
         {% if part.type == 'sensors' %}
       - type: custom:layout-card
         layout_type: custom:{{part.display_type}}-layout
         layout:
-          max_cols: {{part.max_columns}}
-          width: 180
-          max_width: 1000
+          max_cols: {{part.min_width}}
+          width: {{part.min_width}}
+          max_width: {{part.max_width}}
         view_layout:
           column: {{part.column}}
+          {% if part.hideOnMobile %}
+          show:
+            mediaquery: "(min-width: 480px)"
+          {% endif %}        
         cards: !include 
             - ../templates/partials/home/sensors.yaml
             - entities: {{(part.entities|tojson)}}
@@ -40,10 +44,14 @@ cards:
         layout_type: custom:{{part.display_type}}-layout
         layout:
           max_cols: {{part.max_columns}}
-          width: 180
-          max_width: 1000
+          width: {{part.min_width}}
+          max_width: {{part.max_width}}
         view_layout:
           column: {{part.column}}
+          {% if part.hideOnMobile %}
+          show:
+            mediaquery: "(min-width: 480px)"
+          {% endif %}        
         cards: !include 
             - ../templates/partials/home/weather.yaml
             - entities: {{(part.entities|tojson)}}
@@ -53,23 +61,31 @@ cards:
         layout_type: custom:{{part.display_type}}-layout
         layout:
           max_cols: {{part.max_columns}}
-          width: 180
-          max_width: 1000
+          width: {{part.min_width}}
+          max_width: {{part.max_width}}
         view_layout:
           column: {{part.column}}
+          {% if part.hideOnMobile %}
+          show:
+            mediaquery: "(min-width: 480px)"
+          {% endif %}        
         cards: !include 
             - ../templates/partials/home/cameras.yaml
             - entities: {{(part.entities|tojson)}}
         {% endif %}
-        {% if _global.tablet.settings.powerConsumptions and part.type == 'charts' %}
+        {% if part.type == 'charts' %}
       - type: custom:layout-card
         layout_type: custom:{{part.display_type}}-layout
         layout:
           max_cols: {{part.max_columns}}
-          width: 180
-          max_width: 1000
+          width: {{part.min_width}}
+          max_width: {{part.max_width}}
         view_layout:
           column: {{part.column}}
+          {% if part.hideOnMobile %}
+          show:
+            mediaquery: "(min-width: 480px)"
+          {% endif %}        
         cards: !include 
             - ../templates/partials/home/charts.yaml
             - entities: {{(part.entities|tojson)}}
@@ -79,10 +95,14 @@ cards:
         layout_type: custom:{{part.display_type}}-layout
         layout:
           max_cols: {{part.max_columns}}
-          width: 180
-          max_width: 1000
+          width: {{part.min_width}}
+          max_width: {{part.max_width}}
         view_layout:
           column: {{part.column}}
+          {% if part.hideOnMobile %}
+          show:
+            mediaquery: "(min-width: 480px)"
+          {% endif %}        
         cards: !include 
             - ../templates/partials/home/entities.yaml
             - entities: {{(part.entities|tojson)}}

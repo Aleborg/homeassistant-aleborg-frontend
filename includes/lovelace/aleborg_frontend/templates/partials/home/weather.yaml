@@ -2,6 +2,12 @@
 
 {% for weather in (entities|sort(attribute='sortOrder')) %}
 - type: weather-forecast
+  {% if weather.hideOnMobile %}
+  view_layout:
+    show:
+      mediaquery: "(min-width: 480px)"
+  {% endif %}        
+  card_mod: !include ../styles/ha-card-alt-background.yaml
   entity: {{weather.entity_id}}
   {% if weather.show_current %}
   show_current: {{weather.show_current}}

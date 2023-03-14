@@ -2,6 +2,12 @@
 
 {% for camera in (entities|sort(attribute='sortOrder')) %}
 - type: picture-entity
+  {% if camera.hideOnMobile %}
+  view_layout:
+    show:
+      mediaquery: "(min-width: 480px)"
+  {% endif %}        
+  card_mod: !include ../styles/ha-card-alt-background.yaml
   entity: {{camera.entity_id}}
   {% if camera.name %}
   name: {{camera.name}}
@@ -24,7 +30,6 @@
   {% if camera.state_filter %}
   state_filter: {{camera.state_filter}}
   {% endif %}
-  card_mod: !include ../styles/ha-card-alt-background.yaml
   tap_action:
     action: none
   hold_action:

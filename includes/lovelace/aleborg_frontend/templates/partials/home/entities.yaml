@@ -4,6 +4,11 @@
 - type: custom:mushroom-{{ent.type}}-card
   entity: {{ent.entity_id}}
   card_mod: !include ../styles/ha-card-alt-background.yaml
+  {% if ent.hideOnMobile %}
+  view_layout:
+    show:
+      mediaquery: "(min-width: 480px)"
+  {% endif %}        
 
   # Common
   #############################################

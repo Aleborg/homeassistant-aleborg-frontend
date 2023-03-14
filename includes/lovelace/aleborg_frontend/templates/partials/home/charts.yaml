@@ -2,6 +2,11 @@
 
 {% for chart in (entities|sort(attribute='sortOrder')) %}
 - type: custom:apexcharts-card
+  {% if chart.hideOnMobile %}
+  view_layout:
+    show:
+      mediaquery: "(min-width: 480px)"
+  {% endif %}        
   card_mod: !include ../styles/ha-card-alt-background.yaml
   style:
     .: >
