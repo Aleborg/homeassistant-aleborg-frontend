@@ -13,12 +13,15 @@ This frontend doesn't have support for all types of devices and entities due to 
 
 There's still a lot to do in this frontend and my CSS skills sucks, so all contribution is welcome! 
 
-Did you install it? I would love to get some feedback! 
+Have you install it? I would love to get some feedback! 
+
 
 <a href="https://www.buymeacoffee.com/aleborg"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=aleborg&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
 ## Table of Content <!-- omit in toc -->
 - [Aleborg Frontend](#aleborg-frontend)
+  - [CHANGELOG](#changelog)
+  - [Updates](#updates)
   - [Requirements](#requirements)
     - [Frontend (HACS)](#frontend-hacs)
     - [Integrations (HACS)](#integrations-hacs)
@@ -40,6 +43,13 @@ Did you install it? I would love to get some feedback!
     - [Multimedia in a room](#multimedia-in-a-room)
     - [Calendar in a room](#calendar-in-a-room)
     - [Power usage in a room](#power-usage-in-a-room)
+
+## CHANGELOG
+
+Read the latest [changelog here](changelog.md)! 
+
+## Updates
+When updating the dashboard, please be aware that the settings.yaml can be overwritten if you're not careful. Compare your current settings.yaml to the new to see what have changed!
 
 ## Requirements
 
