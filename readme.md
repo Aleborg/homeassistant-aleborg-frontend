@@ -89,8 +89,6 @@ Did you install it? I would love to get some feedback!
   <sub>Is used for all custom icons that is used. **Can be removed if you replace all icons in [settings.yaml](includes/lovelace/aleborg_frontend/settings.yaml)**</sub>
 * **[Nord Pool integration for Home Assistant](https://github.com/custom-components/nordpool)** by [@custom-components](https://github.com/custom-components)\
   <sub>Fetches electric prices in [home.yaml](includes/lovelace/aleborg_frontend/views/home.yaml). **Can be removed**</sub>
-* **[Variable](https://github.com/snarky-snark/home-assistant-variables)** by [@snarky-snark](https://github.com/snarky-snark)\
-  <sub>This is the plugin that allow us to gather all the settings in one file, [settings.yaml](includes/lovelace/aleborg_frontend/settings.yaml)</sub>
 
 ## Installation
 
