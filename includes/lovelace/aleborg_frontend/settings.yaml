@@ -102,12 +102,16 @@ startPage:
   title: "Hem"
   icon: "fapro:handle"
   display_type: horizontal
+  max_columns: 2
   parts:
     - type: sensors
       sortOrder: 0
       display_type: horizontal
       column: 1
       max_columns: 10
+      min_width: 175
+      max_width: 1000
+      hideOnMobile: false
       entities:
         - entity_id: sensor.nibe_23270_40014
           sortOrder: 0
@@ -133,6 +137,8 @@ startPage:
       display_type: vertical
       column: 2
       max_columns: 10
+      min_width: 175
+      max_width: 1000
       entities:
         - entity_id: weather.smhi_home
           sortOrder: 0
@@ -144,6 +150,8 @@ startPage:
       display_type: horizontal
       column: 1
       max_columns: 10
+      min_width: 175
+      max_width: 1000
       entities:
         - entity_id: camera.security_camera
           sortOrder: 0
@@ -163,6 +171,8 @@ startPage:
       display_type: vertical
       column: 2
       max_columns: 10
+      min_width: 175
+      max_width: 1000
       entities:
         - entity_id: sensor.nordpool_kwh_se3_sek_3_10_025
           sortOrder: 0
@@ -174,6 +184,8 @@ startPage:
       display_type: horizontal
       column: 1
       max_columns: 3
+      min_width: 175
+      max_width: 1000
       entities:
         - entity_id: binary_sensor.group_motion_automation_mysbelysning
           sortOrder: 0

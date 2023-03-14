@@ -61,7 +61,7 @@ cards:
             - ../templates/partials/home/cameras.yaml
             - entities: {{(part.entities|tojson)}}
         {% endif %}
-        {% if part.type == 'charts' %}
+        {% if _global.tablet.settings.powerConsumptions and part.type == 'charts' %}
       - type: custom:layout-card
         layout_type: custom:{{part.display_type}}-layout
         layout:
