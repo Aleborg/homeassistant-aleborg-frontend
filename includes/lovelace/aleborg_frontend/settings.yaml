@@ -84,6 +84,7 @@ settings:
       apexCardElectricityPrices: "Elpriser"
       apexCardRightNow: "Just nu"
       apexCardToday: "Idag"
+      apexCardTomorrow: "I morgon"
       apexCardElectricityTransfer: 18.55
       apexCardElectricityTax: 49
       chartsWarmWater: "Varmvatten"
@@ -97,14 +98,145 @@ settings:
     maxSegmentMonthly: 20
     maxSegmentYearly: 60
 
+startPage:
+  title: "Hem"
+  icon: "fapro:handle"
+  display_type: horizontal
+  parts:
+    - type: sensors
+      sortOrder: 0
+      display_type: horizontal
+      column: 1
+      max_columns: 10
+      entities:
+        - entity_id: sensor.nibe_23270_40014
+          sortOrder: 0
+          name: "Varmvatten"
+          detail: 2
+          graph: line
+          hours_to_show: 24
+        - entity_id: sensor.nibe_23270_40004
+          sortOrder: 1
+          name: "Utomhus"
+          detail: 2
+          graph: line
+          hours_to_show: 24
+        - entity_id: sensor.nibe_23270_43009
+          sortOrder: 2
+          name: "Golvvärme"
+          detail: 2
+          graph: line
+          hours_to_show: 24
+
+    - type: weather
+      sortOrder: 1
+      display_type: vertical
+      column: 2
+      max_columns: 10
+      entities:
+        - entity_id: weather.smhi_home
+          sortOrder: 0
+          show_current: true
+          show_forecast: true
+          
+    - type: cameras
+      sortOrder: 2
+      display_type: horizontal
+      column: 1
+      max_columns: 10
+      entities:
+        - entity_id: camera.security_camera
+          sortOrder: 0
+          name: "Entrén"
+          show_state: true
+          show_name: true
+          camera_view: auto
+        - entity_id: camera.192_168_100_163
+          sortOrder: 1
+          name: "Framsidan"
+          show_state: true
+          show_name: true
+          camera_view: auto
+
+    - type: charts
+      sortOrder: 3
+      display_type: vertical
+      column: 2
+      max_columns: 10
+      entities:
+        - entity_id: sensor.nordpool_kwh_se3_sek_3_10_025
+          sortOrder: 0
+          hours_12: false
+          graph_span: 48h
+
+    - type: entities
+      sortOrder: 4
+      display_type: horizontal
+      column: 1
+      max_columns: 3
+      entities:
+        - entity_id: binary_sensor.group_motion_automation_mysbelysning
+          sortOrder: 0
+          type: entity
+          tap_action: 
+            action: none
+          hold_action: 
+            action: none
+          double_tap_action: 
+            action: none
+        - entity_id: climate.nibe_23270_s1_supply
+          sortOrder: 1
+          type: climate
+          tap_action: 
+            action: none
+          hold_action: 
+            action: none
+          double_tap_action: 
+            action: none
+        - entity_id: lock.entredorren
+          sortOrder: 5
+          type: lock
+          collapsible_controls: true
+          tap_action: 
+            action: none
+          hold_action: 
+            action: none
+          double_tap_action: 
+            action: none
+        - entity_id: light.dm011_belysning_takspots_nedre_badrummet
+          sortOrder: 2
+          type: light
+          collapsible_controls: true
+          show_brightness_control: true
+          tap_action: 
+            action: none
+          hold_action: 
+            action: none
+          double_tap_action: 
+            action: none
+        - entity_id: fan.nibe_23270_ventilation
+          sortOrder: 3
+          type: fan
+          collapsible_controls: true
+          show_brightness_control: true
+          tap_action: 
+            action: none
+          hold_action: 
+            action: none
+          double_tap_action: 
+            action: none
+        - entity_id: person.anders_aleborg
+          sortOrder: 4
+          type: person
+          collapsible_controls: true
+          tap_action: 
+            action: none
+          hold_action: 
+            action: none
+          double_tap_action: 
+            action: none
+
 rooms:
-  - title: "Hem"
-    url: "home"
-    file: "home.yaml"
-    icon: "fapro:handle"
-    isShortcut: true
-    sortOrder: 0
-  
   - title: "Belysning" 
     url: "lights"
     file: "lights.yaml"
