@@ -6,6 +6,15 @@
 - type: custom:mushroom-chips-card
   alignment: center
   chips:
+    - type: action
+      double_tap_action:
+        action: none
+      icon: "{{_global.tablet.startPage.icon}}"
+      tap_action:
+        action: navigate
+        navigation_path: /{{_global.tablet.settings.dashboardPath}}/{{_global.tablet.startPage.url}}
+      hold_action:
+        action: none
 {% for room in _global.tablet.rooms|sort(attribute='sortOrder') %}
   {% if room.isShortcut %}
     - type: action
