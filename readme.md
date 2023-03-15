@@ -83,8 +83,6 @@ When updating the dashboard, please be aware that the settings.yaml can be overw
   <sub>Shows the control for Sonos integration **Can be removed and replaced with a regular media player**</sub>
 * **[Mushroom](https://github.com/piitaya/lovelace-mushroom)** by [@piitaya](https://github.com/piitaya)\
   <sub>Used throughout the code for the design</sub>
-* **[Mushroom Themes](https://github.com/piitaya/lovelace-mushroom-themes)** by [@piitaya](https://github.com/piitaya)\
-  <sub>Used throughout the code for the design</sub>
 * **[Kiosk Mode](https://github.com/NemesisRE/kiosk-mode)** by [@NemesisRE](https://github.com/NemesisRE)\
   <sub>Displays the dashboard without menu. **Can be removed**</sub>
 * **[Home Assistant Swipe Navigation](https://github.com/zanna-37/hass-swipe-navigation)** by [@zanna-37](https://github.com/zanna-37)\

@@ -312,7 +312,7 @@ The entities type uses the [Mushroom Cards](https://github.com/piitaya/lovelace-
 | `entity_id`     | string    | Required          | ID of the entity to show  |
 | `sortOrder`     | integer   | Required          | Specifies the order of the card in the part | 
 | `hideOnMobile`  | boolean   | Optional          | Specifies if the card should be visible on mobile units (max width 480px)  |
-| `type`          | string    | Required          | The card type that you wish to use, i.e. `sensor`, `weather-forcast`, |
+| `type`          | string    | Required          | The card type that you wish to use, i.e. `sensor`, `weather-forcast`, `custom:mushroom-climate-card`|
 
 
 ###### Example
