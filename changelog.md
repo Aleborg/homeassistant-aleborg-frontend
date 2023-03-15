@@ -1,3 +1,13 @@
+# v0.0.3
+
+## What's Changed
+
+### Bug Fixes
+
+### Improvements
+- Changed how the start page works, you can now use any type of card
+- Updated the readme file with the new changes to the start page 
+
 # v0.0.2
 
 ## What's Changed
@@ -17,3 +27,7 @@
 - Added electric costs chart to home.yaml
 - Added cameras to home.yaml
 - Added documentation for the start page in settings.yaml file
+
+# v0.0.1
+
+Initial release

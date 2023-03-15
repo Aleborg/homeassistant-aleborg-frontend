@@ -1,0 +1,17 @@
+# lovelace_gen
+
+{% for card in (entities|sort(attribute='sortOrder')) %}
+- entity: {{card.entity_id}}
+  card_mod: !include ../styles/ha-card-alt-background.yaml
+  {% if card.hideOnMobile %}
+  view_layout:
+    show:
+      mediaquery: "(min-width: 480px)"
+  {% endif %}        
+
+  {% for key, value in card.items() %}
+    {% if not key == 'entity_id' and not key == 'sortOrder' and not key == 'hideOnMobile' %}
+  {{key}}: {{value}}
+    {% endif %}
+  {% endfor %}
+{% endfor %}

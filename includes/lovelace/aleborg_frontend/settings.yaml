@@ -104,92 +104,104 @@ startPage:
   display_type: horizontal
   max_columns: 2
   parts:
-    - type: sensors
+    - group: sensors
       sortOrder: 0
       display_type: horizontal
       column: 1
       max_columns: 10
       min_width: 175
       max_width: 1000
-      hideOnMobile: false
-      entities:
+      cards:
         - entity_id: sensor.nibe_23270_40014
           sortOrder: 0
+          type: sensor
           name: "Varmvatten"
           detail: 2
           graph: line
           hours_to_show: 24
         - entity_id: sensor.nibe_23270_40004
           sortOrder: 1
+          type: sensor
           name: "Utomhus"
           detail: 2
           graph: line
           hours_to_show: 24
         - entity_id: sensor.nibe_23270_43009
           sortOrder: 2
+          type: sensor
           name: "Golvvärme"
           detail: 2
           graph: line
           hours_to_show: 24
+        - entity_id: sensor.sa001_siren_alarm_korridoren_ovre_hallen_temperature
+          sortOrder: 3
+          type: sensor
+          name: "Inomhus"
+          detail: 2
+          graph: line
+          hours_to_show: 24
 
-    - type: weather
+    - group: weather
       sortOrder: 1
       display_type: vertical
       column: 2
       max_columns: 10
       min_width: 175
       max_width: 1000
-      entities:
+      cards:
         - entity_id: weather.smhi_home
           sortOrder: 0
+          type: weather-forecast
           show_current: true
           show_forecast: true
           
-    - type: cameras
+    - group: cameras
       sortOrder: 2
       display_type: horizontal
       column: 1
       max_columns: 10
       min_width: 175
       max_width: 1000
-      entities:
+      cards:
         - entity_id: camera.security_camera
           sortOrder: 0
+          type: picture-entity
           name: "Entrén"
           show_state: true
           show_name: true
           camera_view: auto
         - entity_id: camera.192_168_100_163
           sortOrder: 1
+          type: picture-entity
           name: "Framsidan"
           show_state: true
           show_name: true
           camera_view: auto
 
-    - type: charts
+    - group: custom_power_chart
       sortOrder: 3
       display_type: vertical
       column: 2
       max_columns: 10
       min_width: 175
       max_width: 1000
-      entities:
+      cards:
         - entity_id: sensor.nordpool_kwh_se3_sek_3_10_025
           sortOrder: 0
           hours_12: false
           graph_span: 48h
 
-    - type: entities
+    - group: entities
       sortOrder: 4
       display_type: horizontal
       column: 1
       max_columns: 3
       min_width: 175
       max_width: 1000
-      entities:
+      cards:
         - entity_id: binary_sensor.group_motion_automation_mysbelysning
           sortOrder: 0
-          type: entity
+          type: custom:mushroom-entity-card
           tap_action: 
             action: none
           hold_action: 
@@ -198,7 +210,7 @@ startPage:
             action: none
         - entity_id: climate.nibe_23270_s1_supply
           sortOrder: 1
-          type: climate
+          type: custom:mushroom-climate-card
           tap_action: 
             action: none
           hold_action: 
@@ -207,7 +219,7 @@ startPage:
             action: none
         - entity_id: lock.entredorren
           sortOrder: 5
-          type: lock
+          type: custom:mushroom-lock-card
           collapsible_controls: true
           tap_action: 
             action: none
@@ -217,7 +229,7 @@ startPage:
             action: none
         - entity_id: light.dm011_belysning_takspots_nedre_badrummet
           sortOrder: 2
-          type: light
+          type: custom:mushroom-light-card
           collapsible_controls: true
           show_brightness_control: true
           tap_action: 
@@ -228,7 +240,7 @@ startPage:
             action: none
         - entity_id: fan.nibe_23270_ventilation
           sortOrder: 3
-          type: fan
+          type: custom:mushroom-fan-card
           collapsible_controls: true
           show_brightness_control: true
           tap_action: 
@@ -239,7 +251,7 @@ startPage:
             action: none
         - entity_id: person.anders_aleborg
           sortOrder: 4
-          type: person
+          type: custom:mushroom-person-card
           collapsible_controls: true
           tap_action: 
             action: none
@@ -247,6 +259,22 @@ startPage:
             action: none
           double_tap_action: 
             action: none
+
+    - group: gauge
+      sortOrder: 0
+      display_type: horizontal
+      column: 1
+      max_columns: 10
+      min_width: 175
+      max_width: 1000
+      cards:
+        - entity_id: sensor.fryslada_power
+          sortOrder: 0
+          type: gauge
+          name: fryslåda
+          min: 0
+          max: 50
+          needle: true
 
 rooms:
   - title: "Belysning" 

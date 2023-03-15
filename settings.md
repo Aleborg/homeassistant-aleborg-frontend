@@ -18,24 +18,18 @@
     - [Example](#example-5)
   - [Parts](#parts)
       - [Example](#example-6)
-    - [Types](#types)
-      - [`sensors`](#sensors)
+    - [Groups](#groups)
+      - [Cards](#cards)
         - [Example](#example-7)
-      - [`weather`](#weather)
+      - [`custom_power_chart`](#custom_power_chart)
         - [Example](#example-8)
-      - [`cameras`](#cameras)
-        - [Example](#example-9)
-      - [`charts`](#charts)
-        - [Example](#example-10)
-      - [`entities`](#entities)
-        - [Example](#example-11)
 - [Rooms and pages](#rooms-and-pages)
     - [Shortcuts (below the clock in the sidebar)](#shortcuts-below-the-clock-in-the-sidebar)
-      - [Example](#example-12)
+      - [Example](#example-9)
     - [Floors / Subjects in the menu](#floors--subjects-in-the-menu)
-      - [Example](#example-13)
+      - [Example](#example-10)
     - [Rooms](#rooms)
-      - [Example](#example-14)
+      - [Example](#example-11)
 - [Full example](#full-example)
 
 
@@ -263,7 +257,7 @@ Each part has the following options:
 
 | Name            | Type      | Optional/Required | Description            |
 |:----------------|:---------:|:-----------------:|:-----------------------|
-| `type`          | string    | Required          | Supported options are [sensors](#sensors), [weather](#weather), [cameras](#cameras)], [charts](#charts) and [entities](#entities) |
+| `group`          | string    | Required          | A group name for the card, a name that makes it easy to remember what it contains. Only group name that is reserved is `custom_power_chart`.  |
 | `sortOrder`     | integer   | Required          | Specifies the order of the type in the start page | 
 | `display_type`  | string    | Required          | How the start page should be displayed. Supported options are `horizontal`, `vertical`, `grid` and `masonry`  |
 | `column`        | integer   | Required          | Specifies the column that the part should be shown in |
@@ -271,12 +265,12 @@ Each part has the following options:
 | `min_width`     | integer   | Required          | Minimum width of each entity, in px   |
 | `max_width`     | integer   | Required          | Maximum width of each entity, in px  |
 | `hideOnMobile`  | boolean   | Optional          | Specifies if the part should be visible on mobile units (max width 480px)  |
-| `entities`      | array     | Required          | An array of entities to be shown in the part  |
+| `cards`      | array     | Required          | An array of entities to be shown in the part  |
 
 ##### Example
 
 ```yaml
-  - type: sensors
+  - id: sensors
     sortOrder: 0
     display_type: horizontal
     column: 1
@@ -284,98 +278,32 @@ Each part has the following options:
     min_width: 175
     max_width: 1000
     hideOnMobile: false
-    entities:
+    cards:
       ...
-  - type: weather
+  - id: weather
     sortOrder: 1
     display_type: vertical
     column: 2
     max_columns: 10
     min_width: 175
     max_width: 1000
-    entities:
+    cards:
+      ...
+  - group: custom_power_chart
+    sortOrder: 3
+    display_type: vertical
+    column: 2
+    max_columns: 10
+    min_width: 175
+    max_width: 1000
+    cards:
       ...
 ```
 
-#### Types
-Each type can be used more than once, all entities in the part will be grouped together. 
+#### Groups
+All cards in the part will be grouped together. 
 
-##### `sensors`
-This part uses the [Sensor Card](https://www.home-assistant.io/dashboards/sensor/). All configuration variables from the card can be used.
-
-| Name            | Type      | Optional/Required | Description            |
-|:----------------|:---------:|:-----------------:|:-----------------------|
-| `entity_id`     | string    | Required          | ID of the entity to show  |
-| `sortOrder`     | integer   | Required          | Specifies the order of the card in the part | 
-| `hideOnMobile`  | boolean   | Optional          | Specifies if the card should be visible on mobile units (max width 480px)  |
-
-###### Example
-
-```yaml
-  - entity_id: sensor.nibe_23270_40014
-    sortOrder: 0
-    name: "Hotwater"
-    detail: 2
-    graph: line
-    hours_to_show: 24
-```
-
-##### `weather`
-This part uses the [Weather Forecast Card](https://www.home-assistant.io/dashboards/weather-forecast/). All configuration variables from the card can be used.
-
-| Name            | Type      | Optional/Required | Description            |
-|:----------------|:---------:|:-----------------:|:-----------------------|
-| `entity_id`     | string    | Required          | ID of the entity to show  |
-| `sortOrder`     | integer   | Required          | Specifies the order of the card in the part | 
-| `hideOnMobile`  | boolean   | Optional          | Specifies if the card should be visible on mobile units (max width 480px)  |
-
-###### Example
-
-```yaml
-  - entity_id: weather.smhi_home
-    sortOrder: 0
-    show_current: true
-    show_forecast: true
-```
-
-##### `cameras`
-This part uses the [Picture Entity Card](https://www.home-assistant.io/dashboards/picture-entity/). All configuration variables from the card can be used.
-
-| Name            | Type      | Optional/Required | Description            |
-|:----------------|:---------:|:-----------------:|:-----------------------|
-| `entity_id`     | string    | Required          | ID of the entity to show  |
-| `sortOrder`     | integer   | Required          | Specifies the order of the card in the part | 
-| `hideOnMobile`  | boolean   | Optional          | Specifies if the card should be visible on mobile units (max width 480px)  |
-
-###### Example
-
-```yaml
-  - entity_id: camera.security_camera
-    sortOrder: 0
-    name: "Entrén"
-    show_state: true
-    show_name: true
-```
-
-##### `charts`
-This chart shows the power costs chart. It will only be displayed if [`powerConsumptions`](#power-consumption-segments) is specified in the settings.
-
-| Name            | Type      | Optional/Required | Description            |
-|:----------------|:---------:|:-----------------:|:-----------------------|
-| `entity_id`     | string    | Required          | ID of the entity to show  |
-| `sortOrder`     | integer   | Required          | Specifies the order of the card in the part | 
-| `hideOnMobile`  | boolean   | Optional          | Specifies if the card should be visible on mobile units (max width 480px)  |
-
-###### Example
-
-```yaml
-  - entity_id: sensor.nordpool_kwh_se3_sek_3_10_025
-    sortOrder: 0
-    hours_12: false
-    graph_span: 48h
-```
-
-##### `entities`
+##### Cards 
 
 The entities type uses the [Mushroom Cards](https://github.com/piitaya/lovelace-mushroom#cards) to display entities. All the mushroom settings for each card can be used here, See the links for each `type` for the settings for each card.
 
@@ -384,7 +312,7 @@ The entities type uses the [Mushroom Cards](https://github.com/piitaya/lovelace-
 | `entity_id`     | string    | Required          | ID of the entity to show  |
 | `sortOrder`     | integer   | Required          | Specifies the order of the card in the part | 
 | `hideOnMobile`  | boolean   | Optional          | Specifies if the card should be visible on mobile units (max width 480px)  |
-| `type`          | string    | Required          | Type of card that should be used. Supported options are [climate](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/climate.md), [light](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/light.md), [fan](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/fan.md), [humidifier](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/humidifier.md), [media-player](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/media-player.md), [vacuum](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/vacuum.md), [cover](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/cover.md) [alarm-control-panel](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/alarm-control-panel.md), [person](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/person.md), [lock](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/lock.md), [entity](https://github.com/piitaya/lovelace-mushroom/blob/main/docs/cards/entity.md) |
+| `type`          | string    | Required          | The card type that you wish to use, i.e. `sensor`, `weather-forcast`, |
 
 
 ###### Example
@@ -401,6 +329,34 @@ The entities type uses the [Mushroom Cards](https://github.com/piitaya/lovelace-
       action: none
     double_tap_action: 
       action: none
+  - entity_id: sensor.nibe_23270_43009
+    sortOrder: 2
+    type: sensor
+    name: "Floor heating"
+    detail: 2
+    graph: line
+    hours_to_show: 24
+```
+
+
+##### `custom_power_chart`
+This chart shows the power costs from Nordpool. It will only be displayed if [`powerConsumptions`](#power-consumption-segments) is specified in the settings. If you use another power cost component, it might work as well, I haven't tried...
+
+| Name            | Type      | Optional/Required | Description            |
+|:----------------|:---------:|:-----------------:|:-----------------------|
+| `entity_id`     | string    | Required          | ID of the entity to show  |
+| `sortOrder`     | integer   | Required          | Specifies the order of the card in the part | 
+| `hideOnMobile`  | boolean   | Optional          | Specifies if the card should be visible on mobile units (max width 480px)  |
+| `hours_12`      | boolean   | Required          | If the chart should use 12 or 24 hour format  |
+| `graph_span`    | hour   | Required          | Amount of hours to show, in the format 12h, 24h etc.  |
+
+###### Example
+
+```yaml
+  - entity_id: sensor.nordpool_kwh_se3_sek_3_10_025
+    sortOrder: 0
+    hours_12: false
+    graph_span: 48h
 ```
 
 
@@ -425,12 +381,12 @@ This is where you configure the rooms
 ```yaml
 rooms:
   ...
-  - title: "Hem"
-    url: "home"
-    file: "home.yaml"
-    icon: "mdi:home"
+  - title: "Zigbee-Map" 
+    url: "zigbeemap"
+    file: "zigbeemap.yaml"
+    icon: "mdi:zigbee"
     isShortcut: true
-    sortOrder: 0
+    sortOrder: 2
 ```
 
 #### Floors / Subjects in the menu
