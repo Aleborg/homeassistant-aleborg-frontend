@@ -89,7 +89,9 @@ When updating the dashboard, please be aware that the settings.yaml can be overw
   <sub>Makes it possible to swipe between the pages. **Can be removed**</sub>
 * **[Tabbed Card](https://github.com/kinghat/tabbed-card)** by [@kinghat](https://github.com/kinghat)\
   <sub>Makes it possible to have the tabs(icons) that allows us to display lights, media etc in each room/area </sub>
-
+* **[my-slider](https://github.com/AnthonMS/my-cards)** by [@AnthonMS](https://github.com/AnthonMS)\
+  <sub>Gives us the slider for the lights</sub>
+  
 ### Integrations (HACS)
 * **[lovelace_gen](https://github.com/thomasloven/hass-lovelace_gen)** by [@thomasloven](https://github.com/thomasloven/)\
   <sub>This is what makes the magic happen, along side with auto-entities and Variable</sub>
